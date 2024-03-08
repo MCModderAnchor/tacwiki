@@ -1,0 +1,20 @@
+name: Build and Deploy
+on:   
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.PERSONAL_SECRET }}
+        TARGET_REPO: MCModderAnchor/tacwiki
+        TARGET_BRANCH: gh_pages
+        BUILD_SCRIPT: yarn && yarn run vuepress build docs
+        BUILD_DIR: docs/.vuepress/dist/
