@@ -18,4 +18,4 @@ jobs:
         TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: yarn && yarn run vuepress build docs
         BUILD_DIR: docs/.vuepress/dist/
-        CNAME: https://tacwiki.mcma.club
+        CNAME: tacwiki.mcma.club
