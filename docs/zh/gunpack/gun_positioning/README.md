@@ -7,6 +7,10 @@
 按照如下步骤将 cameras 安装到你的 BlockBench。   
 ![Install Plugin 1](./blockbench_load_plugin_1.png)   
 ![Install Plugin 2](./blockbench_load_plugin_2.png)   
+### 更改 BlockBench 的 FOV 设置
+在开始调整第一人称定位之前，你需要确认你的 BlockBench 预览 FOV 为 70。这是因为在 Minecraft 中，第一人称物品渲染的默认 FOV 是 70。   
+![FOV Check 1](./fov_check_1.png)   
+![FOV Check 2](./fov_check_2.png)   
 ### 调整第一人称摄像机定位组  
 首先，为了模型分组整洁，我们可以创建一个名为 positioning 的分组 (这个分组的名称你可以自己决定) ，用于统一存放各种模型定位组。   
 接下来，在 position 中新建两个分组，分别名为 iron_view 和 idle_view (这两个分组的名称不能改变)。它们分别是 机瞄视角的定位组 和 正常持握视角的定位组。   
