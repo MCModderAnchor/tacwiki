@@ -8,6 +8,7 @@
 ### 枪包详细构建教程
 - [创建第一个枪包](/zh/gunpack/first_gunpack/)
 - [创建第一把枪](/zh/gunpack/first_gun/)
+- [调整枪械模型定位组](/zh/gunpack/gun_positioning/)
 ### 枪械包参考文件结构
 [tac 默认枪包](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun) 采用了这个文件结构。
 ```
