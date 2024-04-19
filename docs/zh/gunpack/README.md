@@ -1,8 +1,8 @@
 # 枪械包数据结构
 
-- 枪械包支持 zip 压缩格式和文件夹两种形式。zip 格式方便分发，文件夹形式方便枪械制作者制作使用。
-- 无论是压缩包还是文件夹，其文件结构都相同
+- 枪械包支持 zip 压缩格式和文件夹两种形式。zip 格式方便分发，文件夹形式方便枪械制作者制作使用。其文件结构相同。
 - 需要注意的是，大部分情况下，枪包无法引用 MC 原版资源和模组资源。因此你应当将所有需要的东西放入枪包中。
+- 枪包支持的模型格式目前仅为基岩版模型。
 - 枪包之间引用资源文件，可以通过 '命名空间:资源名称' 的方式进行。
 
 你可以参考：[tac 默认枪包](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun)
@@ -10,98 +10,137 @@
 
 ```
 根目录
-└───tac   # 枪械包的命名空间，命名空间由此文件夹决定
-     ├─── ammo
-     │     ├──── display   # 弹药的客户端数据
-     │     │     ├──── 762x39_display.json
-     │     │     └──── 9mm_display.json
-     │     │
-     │     └──── index   # 弹药定义文件，弹药 id 由其文件名决定
-     │           ├──── 762x39.json
-     │           └──── 9mm.json
-     │
-     ├─── animations   # 动画文件夹
-     │     ├──── ak47_geo.gltf  # gltf 动画文件
-     │     └──── m16_geo.gltf
-     │
-     ├─── attachments
-     │     ├──── data   # 配件参数
-     │     │     ├──── sro_dot_data.json
-     │     │     └──── acog_4x_data.json
-     │     │
-     │     ├──── display   # 配件的客户端数据
-     │     │     ├──── sro_dot_display.json
-     │     │     └──── acog_4x_display.json
-     │     │
-     │     └──── index   # 配件定义文件，配件 id 由其文件名决定
-     │           ├──── sro_dot.json
-     │           └──── acog_4x.json
-     │
-     ├─── guns
-     │     ├──── data   # 枪械参数
-     │     │     ├──── ak47_data.json
-     │     │     └──── m16_data.json
-     │     │
-     │     ├──── display   # 枪械的客户端数据
-     │     │     ├──── ak47_display.json
-     │     │     └──── m16_display.json
-     │     │
-     │     └──── index   # 枪械定义文件，枪械 id 由其文件名决定
-     │           ├──── ak47.json
-     │           └──── m16.json
-     │
-     ├─── lang   # 语言文件
-     │     ├──── en_us.json
-     │     └──── zh_cn.json
-     │
-     ├─── models
-     │     ├──── ammo   # 弹药模型
-     │     │     ├──── 762x39_geo.json
-     │     │     └──── 9mm_geo.json
-     │     │
-     │     ├──── attachment   # 配件模型
-     │     │     ├──── sro_dot_geo.json
-     │     │     └──── acog_4x_geo.json
-     │     │   
-     │     └──── gun   # 枪械模型
-     │           ├──── ak47_geo.json
-     │           └──── m16_geo.json
-     │   
-     ├─── sounds
-     │     ├──── ak47_shoot.ogg   # 枪械声音文件
-     │     └──── m16_shoot.ogg
-     │
-     └─── textures
-           ├──── ammo
-           │     ├──── slot   #子弹材质文件，用于背包、快捷栏等容器的槽位显示
-           │     │     ├──── 762x39.png
-           │     │     └──── 9mm.png
-           │     │
-           │     └──── uv   # 子弹材质文件，用于模型
-           │           ├──── 762x39.png
-           │           └──── 9mm.png
-           │
-           ├──── attachment
-           │     ├──── slot   #配件材质文件，用于背包、快捷栏等容器的槽位显示
-           │     │     ├──── sro_dot.png
-           │     │     └──── acog_4x.png
-           │     │
-           │     └──── uv   # 配件材质文件，用于模型
-           │           ├──── sro_dot.png
-           │           └──── acog_4x.png
-           │
-           └──── gun
-                 ├──── hud   # 枪械材质文件，用于 HUD 和 GUI 的 2D 渲染
-                 │     ├──── ak47.png
-                 │     └──── m16.png
-                 │   
-                 ├──── slot   # 枪械材质文件，用于背包、快捷栏等容器的槽位显示
-                 │     ├──── ak47.png
-                 │     └──── m16.png
-                 │
-                 └──── uv   # 枪械材质文件，用于模型
-                       ├──── ak47.png
-                       └──── m16.png
+└─── tac   # 枪械包的命名空间，命名空间由此文件夹决定
+│    ├─── ammo
+│    │     ├──── display   # 弹药的客户端数据
+│    │     │     ├──── 762x39_display.json
+│    │     │     └──── 9mm_display.json
+│    │     │
+│    │     └──── index   # 弹药定义文件，弹药 id 由其文件名决定
+│    │           ├──── 762x39.json
+│    │           └──── 9mm.json
+│    │
+│    ├─── animations   # 动画文件夹
+│    │     ├──── ak47.gltf  # gltf 动画文件
+│    │     └──── m16.gltf
+│    │
+│    ├─── attachments
+│    │     ├──── data   # 配件参数
+│    │     │     ├──── sro_dot_data.json
+│    │     │     └──── 8x_data.json
+│    │     │
+│    │     ├──── display   # 配件的客户端数据
+│    │     │     ├──── sro_dot_display.json
+│    │     │     └──── 8x_display.json
+│    │     │
+│    │     └──── index   # 配件定义文件，配件 id 由其文件名决定
+│    │           ├──── sro_dot.json
+│    │           └──── 8x.json
+│    │
+│    ├─── guns
+│    │     ├──── data   # 枪械参数
+│    │     │     ├──── ak47_data.json
+│    │     │     └──── m16_data.json
+│    │     │
+│    │     ├──── display   # 枪械的客户端数据
+│    │     │     ├──── ak47_display.json
+│    │     │     └──── m16_display.json
+│    │     │
+│    │     └──── index   # 枪械定义文件，枪械 id 由其文件名决定
+│    │           ├──── ak47.json
+│    │           └──── m16.json
+│    │
+│    ├─── lang   # 语言文件
+│    │     ├──── en_us.json
+│    │     └──── zh_cn.json
+│    │
+│    ├─── models   # 模型文件，此目录下的子目录分类仅为推荐，你可以自行决定如何分类。
+│    │     ├──── ammo   # 弹药物品模型，在默认枪包里是一个弹药盒，用于在制造台显示。
+│    │     │     ├──── 762x39_geo.json
+│    │     │     └──── 9mm_geo.json
+│    │     │
+│    │     ├──── ammo_entity   # 子弹实体模型
+│    │     │     └──── rpg_rocket.json
+│    │     │
+│    │     ├──── attachment   # 配件模型
+│    │     │     ├──── sro_dot_geo.json
+│    │     │     └──── 8x_geo.json
+│    │     │   
+│    │     ├──── gun   # 枪械模型
+│    │     │     ├──── ak47_geo.json
+│    │     │     └──── m16_geo.json
+│    │     │
+│    │     └──── shell   # 枪械模型
+│    │           ├──── 762x39_shell.json
+│    │           └──── 9mm_shell.json
+│    │
+│    ├─── recipes   # 配方文件。此目录下的子目录分类仅为推荐，你可以自行决定如何分类。
+│    │     ├──── ammo   # 弹药配方
+│    │     │     ├──── 762x39.json
+│    │     │     └──── 9mm.json
+│    │     │
+│    │     └──── gun   # 枪械配方
+│    │           ├──── ai_awp.json
+│    │           └──── ak47.json
+│    │
+│    ├─── sounds   # 枪械声音文件。此目录下的子目录分类仅为推荐。声音格式仅支持 ogg。
+│    │     ├──── ak47
+│    │     │     ├──── ak47_draw.ogg
+│    │     │     └──── ak47_shoot.ogg
+│    │     │
+│    │     └──── ai_awp
+│    │           ├──── ai_awp_draw.ogg
+│    │           └──── ai_awp_shoot.ogg
+│    │
+│    ├─── textures   # 材质文件。此目录下的子目录分类仅为推荐，你可以自行决定如何分类。
+│    │     ├──── ammo
+│    │     │     ├──── slot   # 子弹在背包、快捷栏等容器的槽位显示的贴图
+│    │     │     │     ├──── 762x39.png
+│    │     │     │     └──── 9mm.png
+│    │     │     │
+│    │     │     └──── uv   # 子弹模型贴图
+│    │     │           ├──── 762x39.png
+│    │     │           └──── 9mm.png
+│    │     │
+│    │     ├──── ammo_entity   # 子弹实体模型贴图
+│    │     │     └──── rpg_rocket.png
+│    │     │
+│    │     ├──── attachment
+│    │     │     ├──── slot   # 配件在背包、快捷栏等容器的槽位显示的贴图
+│    │     │     │     ├──── sro_dot.png
+│    │     │     │     └──── 8x.png
+│    │     │     │
+│    │     │     └──── uv   # 配件模型贴图
+│    │     │           ├──── sro_dot.png
+│    │     │           └──── 8x.png
+│    │     │
+│    │     ├──── flash   # 枪口火光贴图
+│    │     │     └──── common_muzzle_flash.png
+│    │     │
+│    │     ├──── gun
+│    │     │     ├──── hud   # 用于 HUD 和 GUI 渲染的 2D 贴图
+│    │     │     │     ├──── ak47.png
+│    │     │     │     └──── m16.png
+│    │     │     │
+│    │     │     ├──── lod   # 枪械低精度模型贴图
+│    │     │     │     ├──── ak47.png
+│    │     │     │     └──── m16.png
+│    │     │     │
+│    │     │     ├──── slot   # 枪械在背包、快捷栏等容器的槽位显示的贴图
+│    │     │     │     ├──── ak47.png
+│    │     │     │     └──── m16.png
+│    │     │     │
+│    │     │     └──── uv   # 枪械模型贴图
+│    │     │           ├──── ak47.png
+│    │     │           └──── m16.png
+│    │     │
+│    │     └──── shell   # 弹壳模型贴图
+│    │           ├──── 9mm_shell.png
+│    │           └──── 762x39_shell.png
+│    │
+│    └─── tab.json   # 自定义创造栏标签页文件
+│
+└─── pack.json   # 枪包描述文件
 ```
 
 ### 枪械定义文件
