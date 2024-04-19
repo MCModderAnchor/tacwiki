@@ -6,6 +6,7 @@
 - 图片长宽相等，且尽可能为 2 的整数次方
 - hud 有改色渲染需求，因此提供的原图应该为白色
 因此，接下来，你应该使用图片处理工具，按照需求处理平面图。   
+
 如果你懒得自己动手，你可以到 [这里](https://github.com/MCModderAnchor/tacwiki/tree/main/resource/hud_icon) 获取已经处理好的图片。   
 接下来，我们将平面图置于枪包的 textures/gun/hud/ 目录下，并在 guns/display/ak47_display.json 文件中指定它。   
 此时你的文件结构应该看起来像:   
