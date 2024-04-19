@@ -1,13 +1,15 @@
 # 枪械包构建
-
+::: tip
 - 枪械包支持 zip 压缩格式和文件夹两种形式。zip 格式方便分发，文件夹形式方便枪械制作者制作使用。其文件结构相同。
 - 需要注意的是，大部分情况下，枪包无法引用 MC 原版资源和模组资源。因此你应当将所有需要的东西放入枪包中。
 - 枪包支持的模型格式目前仅为基岩版模型。
-- 枪包之间引用资源文件，可以通过 '命名空间:资源名称' 的方式进行。
-
-你可以参考：[tac 默认枪包](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun)
-### 枪械包文件目录
-
+- 枪包之间引用资源文件，可以通过 '命名空间:资源路径' 的方式进行。
+::: 
+### 枪包详细构建教程
+- [创建第一个枪包](/zh/gunpack/first_gunpack/)
+- [创建第一把枪](/zh/gunpack/first_gun/)
+### 枪械包参考文件结构
+[tac 默认枪包](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun) 采用了这个文件结构。
 ```
 根目录
 ├─── tac   # 枪械包的命名空间，命名空间由此文件夹决定
@@ -142,6 +144,3 @@
 │
 └─── pack.json   # 枪包描述文件
 ```
-### 枪包详细构建教程
-
-- [创建第一把枪](/zh/gunpack/gun/)
