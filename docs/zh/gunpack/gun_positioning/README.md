@@ -46,3 +46,57 @@ idle_view 则是玩家在非瞄准状态下眼球的位置和朝向。
 ![Fixed](./fixed.png)   
 如果你正确地放置了定位组，在游戏中应该看到类似下图的效果。   
 ![In Game 2](./in_game_2.png)
+你可以在效果文件中更改枪械模型在这三种情况下的缩放系数   
+在 guns/display/ak47_display.json 中添加如下代码   
+``` json
+    "transform": {
+        "scale": {
+            // 第三人称手部
+            "thirdperson": [
+                0.6,
+                0.6,
+                0.6
+            ],
+            // 掉落物
+            "ground": [
+                0.6,
+                0.6,
+                0.6
+            ],
+            // 展示框
+            "fixed": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    },
+```
+你的 ak47_display.json 整体看起来应该像:   
+``` json
+{
+    "model": "tutorial:gun/ak47_geo",
+    "texture": "tutorial:gun/uv/ak47",
+    "slot": "tutorial:gun/slot/ak47",
+    "transform": {
+        "scale": {
+            "thirdperson": [
+                0.6,
+                0.6,
+                0.6
+            ],
+            "ground": [
+                0.6,
+                0.6,
+                0.6
+            ],
+            "fixed": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    },
+    "third_person_animation": "default"
+}
+``` 
