@@ -49,7 +49,7 @@ tac:zero 提供了一套默认的程序逻辑，帮助枪包作者更加便捷�
 
 ### 模型定位组
 
-模型定位组负责第三人称的模型渲染定位。可以置于任意位置。可以任意增加旋转。
+以下是第三人称模型定位组，可以置于任意位置。可以任意增加旋转。
 
 | 分组名           | 效果                                                                           |
 | ------------------ | -------------------------------------------------------------------------------- |
@@ -57,30 +57,32 @@ tac:zero 提供了一套默认的程序逻辑，帮助枪包作者更加便捷�
 | fixed            | 指示展示框中模型的渲染原点。详细说明见下图                                     |
 | thirdperson_hand | 指示在实体手上渲染时的渲染原点。一般位于枪械后握把                             |
 
-- 以 ai_awp  为例，group 组的位置：
+- 以 ai_awp  为例，ground 组的位置：
 
-![freecompress4K5DIA4HO672J2PPG8.png](https://b3logfile.com/file/2024/03/freecompress-4K5DI_A4_H_O_672J2PPG8-8eVg9j9.png)
+![AWP Ground](./awp_ground.png)
 
 - 以 ai_awp 为例，thirdperson_hand 的位置：
 
-![freecompressXJR2KX8MEBVW5.png](https://b3logfile.com/file/2024/03/freecompress-_XJ_R_2KX8_M__EBV_W_5-D1kXkrM.png)
+![AWP Third Person Hand](./awp_thirdperson_hand.png)
 
-- 以 ai_awp 为例，以 cameras 插件辅助，fixed的位置和旋转：
+- 以 ai_awp 为例，cameras 插件辅助，fixed的位置和旋转：
 
-![8IQVL1Q2DMSBX4055.png](https://b3logfile.com/file/2024/03/8IQV_L1Q2DM_SBX4055-k0gPueh.png)
+::: tip
+摄像机朝向即为展示框的正面朝向。
+::: 
 
-注：摄像机朝向即为展示框的正面朝向。
+![AWP Fixed](./awp_fixed.png)
 
-### 第一人称摄像机定位组
-
-可以位于任意地方，应用任意旋转。
+以下是第一人称摄像机定位组，可以位于任意地方，应用任意旋转。
 
 | 分组名    | 效果                 |
 | ----------- | ---------------------- |
 | iron_view | 机瞄视角定位组。     |
 | idle_view | 普通持握视角定位组。 |
 
-推荐配合 cameras 插件进行定位。直接向相应的定位组中添加摄像机。通过摄像机能直接对枪械模型在视角中的位置进行预览。
+需要配合 cameras 插件进行定位，直接向相应的定位组中添加摄像机，通过摄像机能直接对枪械模型在视角中的位置进行预览。
 
-![GR66F0CD1RZFCKGZJ2X1.png](https://b3logfile.com/file/2024/03/GR66F0CD1RZFCKGZJ2X1-6yWstpv.png)
-![HC9MLXM5PR5S8EK.png](https://b3logfile.com/file/2024/03/_HC9MLXM5P_R5_S8_EK-WX4ffi8.png)
+如，ai_awp 中的 iron_view 定位组效果: 
+
+![AWP Iron View](./awp_iron_view.png)
+![AWP Iron View In Game](./awp_iron_view_in_game.png)
