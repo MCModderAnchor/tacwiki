@@ -29,8 +29,8 @@
 如果你按照如上步骤操作，最后你将会得到如下的目录视图:    
 ```
 tutorial_gun_pack
-├─ pack.json
 └─ tutorial
+   ├─ pack.json
    ├─ textures
    │  └─ gun
    │     ├─ uv
@@ -177,8 +177,8 @@ tutorial_gun_pack
 经过上述步骤，此时你的枪包目录结构应该是这样:   
 ```
 tutorial_gun_pack
-├─ pack.json
 └─ tutorial
+   ├─ pack.json
    ├─ textures
    │  └─ gun
    │     ├─ uv
