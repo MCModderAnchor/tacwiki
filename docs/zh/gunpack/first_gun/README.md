@@ -5,14 +5,14 @@
 ::: tip
 注意，如果你需要创建一个精细且复杂的枪械模型，推荐你先阅读我们的[枪械模型推荐工作流]()   
 :::
-首先，新建一个基岩版实体模型。   
+1. 首先，新建一个基岩版实体模型。   
 ![Create Bedrock Gun Model](./create_bedrock_gun_model.png)   
-然后，完成你的建模工作。    
+2. 然后，完成你的建模工作。    
 ![Gun Model Review](./gun_model_review.png)    
-最后，导出基岩版模型。   
+3. 最后，导出基岩版模型。   
 ![Export Model](./export_model.png)    
 也不要忘记保存材质文件。   
-你可以借助 BlockBench 的 Screenshot Model 功能生成一个背包 2D 贴图。   
+4. 你可以借助 BlockBench 的 Screenshot Model 功能生成一个背包 2D 贴图。   
 ![Screenshot Model](./screenshot_model.png)    
 注意，此法生成的贴图是非矩形，你需要通过图片修改软件对其进行缩放或裁剪。
 ### 准备工作
