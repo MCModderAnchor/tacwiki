@@ -1,8 +1,6 @@
 # 创建一把枪
-
 我们将以 ak47 为示范，展示如何创建一把最简单的枪，并将其加入你的枪包。
 ### 创建枪械模型
-
 我们先简单地创建一个模型用于教程。（注意，如果你需要创建一个精细且复杂的枪械模型，推荐你先阅读我们的[枪械模型构建工作流]()）   
 首先，新建一个基岩版实体模型。   
 ![Create Bedrock Gun Model](./create_bedrock_gun_model.png)   
@@ -15,15 +13,17 @@
 ![Screenshot Model](./screenshot_model.png)    
 注意，此法生成的贴图是非矩形，你需要通过图片修改软件对其进行缩放或裁剪。
 ### 准备工作
-
 确定你已经准备好了如下材料：   
-模型文件: ak47_geo.json    
-模型贴图: ak47.png    
-背包 2D 贴图: ak47.png    
-首先我们将枪械需要的资源文件放入相应的目录。在教程中，我们将使用 "tutorial" 作为枪包的命名空间。   
-枪械模型应放入枪包的 models/ 目录下。我们可以创建一个子目录 models/gun/ 对枪械模型进行分类。并将模型文件放在此目录下。   
-贴图文件应放入枪包的 textures/ 目录下。同理，我们创建一个子目录 textures/gun/ 对枪械贴图进行归类。在此目录下分别创建 uv 和 slot 文件夹，用于分别储存模型贴图和背包 2D 贴图。我们将模型贴图置于 textures/gun/uv/ 目录下，背包 2D 贴图置于 textures/gun/slot/ 目录下。   
-如果你按照如上步骤操作，最后你将会得到如下的目录视图: 
+- 模型文件: ak47_geo.json    
+- 模型贴图: ak47.png    
+- 背包 2D 贴图: ak47.png    
+::: tip
+如果你懒得自己动手，可以到 [这里](https://github.com/MCModderAnchor/tacwiki/tree/main/resource) 下载已经创建好的资源。   
+:::
+1. 在教程中，我们将使用 "tutorial" 作为枪包的命名空间。   
+2. 枪械模型应放入枪包的 models/ 目录下。我们可以创建一个子目录 models/gun/ 对枪械模型进行分类。并将模型文件放在此目录下。   
+3. 贴图文件应放入枪包的 textures/ 目录下。同理，我们创建一个子目录 textures/gun/ 对枪械贴图进行归类。在此目录下分别创建 uv 和 slot 文件夹，用于分别储存模型贴图和背包 2D 贴图。我们将模型贴图置于 textures/gun/uv/ 目录下，背包 2D 贴图置于 textures/gun/slot/ 目录下。    
+如果你按照如上步骤操作，最后你将会得到如下的目录视图:    
 ```
 tutorial
 ├─ textures
@@ -37,7 +37,6 @@ tutorial
       └─ ak47_geo.json
 ```
 ### 创建枪械数据文件
-
 枪械定义文件应置于 guns/data/ 目录下。此文件用于定义枪械的各项属性，如伤害、弹容、射速等。接下来我们为 ak47 创建一个最基本的数据文件。   
 创建文件 guns/data/ak47_data.json   
 ``` json
@@ -127,20 +126,19 @@ tutorial
   // 不准确度
   "inaccuracy": {
     // 站立射击散布
-    "stand": 0,
+    "stand": 2,
     // 移动射击散布
-    "move": 0,
+    "move": 4,
     // 潜行射击散布
-    "sneak": 0,
+    "sneak": 1,
     // 趴下射击散布
-    "lie": 0,
+    "lie": 0.5,
     // 瞄准射击时散布
-    "aim": 0
+    "aim": 0.2
   }
 }
 ```
 ### 创建枪械效果文件
-
 枪械效果文件应置于 guns/display/ 目录下。此文件用于定义枪械的展示效果，如模型、贴图、动画等。接下来我们为 ak47 创建一个最基本的效果文件。   
 创建文件 guns/display/ak47_display.json   
 ``` json
@@ -155,9 +153,7 @@ tutorial
     "third_person_animation": "default",
 }
 ```
-
 ### 创建枪械定义文件
-
 枪械定义文件应置于 guns/index/ 目录下。此文件用于定义枪械物品，并索引到数据文件和效果文件。需要注意的是，此文件的名称即为你的枪械物品的id，是枪械物品的唯一标识符。接下来我们为 ak47 创建一个最基本的定义文件。   
 创建文件 guns/index/ak47.json   
 ``` json
