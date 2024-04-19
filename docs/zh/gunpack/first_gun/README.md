@@ -23,7 +23,7 @@
 ::: tip
 如果你懒得自己动手，可以到 [这里](https://github.com/MCModderAnchor/tacwiki/tree/main/resource/first_gun) 下载已经创建好的资源。   
 :::
-1. 按照 [创建第一个枪包]() 的步骤创建枪包目录。   
+1. 按照 [创建第一个枪包](/zh/gunpack/first_gunpack/) 的步骤创建枪包目录。   
 2. 枪械模型应放入枪包的 models/ 目录下。我们可以创建一个子目录 models/gun/ 对枪械模型进行分类。并将模型文件放在此目录下。   
 3. 贴图文件应放入枪包的 textures/ 目录下。同理，我们创建一个子目录 textures/gun/ 对枪械贴图进行归类。在此目录下分别创建 uv 和 slot 文件夹，用于分别储存模型贴图和背包 2D 贴图。我们将模型贴图置于 textures/gun/uv/ 目录下，背包 2D 贴图置于 textures/gun/slot/ 目录下。    
 如果你按照如上步骤操作，最后你将会得到如下的目录视图:    
