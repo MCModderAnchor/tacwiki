@@ -41,4 +41,4 @@ idle_view 则是玩家在非瞄准状态下眼球的位置和朝向。
 ![Thirdperson Hand](./thirdperson_hand.png)   
 ![Fixed](./fixed.png)   
 如果你正确地放置了定位组，在游戏中应该看到类似下图的效果。   
-![In Game 2](./in_game_2.gif)
+![In Game 2](./in_game_2.png)
