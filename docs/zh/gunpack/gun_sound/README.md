@@ -57,4 +57,5 @@ tutorial_gun_pack
         "dry_fire": "tutorial:ak47/ak47_dry_fire"
     }
 ```
+指定的枪声时，键的内容对应开头表格的音效名，值则是具体音效的路径。
 4. 到游戏中检验音效是否播放吧。

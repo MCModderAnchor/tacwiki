@@ -32,13 +32,17 @@ module.exports = {
                             '/zh/gunpack/hud_icon/',
                             '/zh/gunpack/gun_sound/',
                             '/zh/gunpack/gun_extra_damage/',
-                            '/zh/gunpack/gun_refit/',
+                            '/zh/gunpack/ammo/',
                             '/zh/gunpack/shell_ejection/',
                             '/zh/gunpack/muzzle_flash/',
                             '/zh/gunpack/lod/',
                             '/zh/gunpack/animation/',
                             '/zh/gunpack/ica/',
-                            '/zh/gunpack/bolt_type/'
+                            '/zh/gunpack/bolt_type/',
+                            '/zh/gunpack/attachment/',
+                            '/zh/gunpack/gun_refit/',
+                            '/zh/gunpack/recipe/',
+                            '/zh/gunpack/tag/'
                         ]
                     },
                     {

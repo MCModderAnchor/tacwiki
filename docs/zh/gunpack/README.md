@@ -13,15 +13,17 @@
 - [创建 HUD Icon](/zh/gunpack/hud_icon/)
 - [添加枪械音效](/zh/gunpack/gun_sound/)
 - [额外伤害](/zh/gunpack/gun_extra_damage/)
-- [创建配件]()
-- [改装支持](/zh/gunpack/gun_refit/)
-- [创建弹药]()
+- [创建弹药](/zh/gunpack/ammo/)
 - [抛壳](/zh/gunpack/shell_ejection/)
 - [枪口火焰](/zh/gunpack/muzzle_flash/)
 - [低精度模型](/zh/gunpack/lod/)
 - [枪械动画](/zh/gunpack/animation/)
 - [动画约束](/zh/gunpack/ica/)
 - [枪机类型](/zh/gunpack/bolt_type/)
+- [创建配件](/zh/gunpack/attachment/)
+- [枪械改装支持](/zh/gunpack/gun_refit/)
+- [配方](/zh/gunpack/recipe/)
+- [自定义创造物品栏标签页](/zh/gunpack/tag/)
 ### 枪械包参考文件结构
 [tac 默认枪包](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun) 采用了这个文件结构。
 ```
