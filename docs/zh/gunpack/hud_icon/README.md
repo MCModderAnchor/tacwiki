@@ -1,15 +1,16 @@
 # 为枪械创建 HUD Icon
 ### 使用 BlockBench Screenshot Model 取得枪械侧视图
 我们可以使用 BlockBench 提供的 Screenshot Model 功能获取到枪械模型的平面图。    
-使用右下角的游标视图，点击合适的轴得到枪模的侧视图。   
+1. 使用右下角的游标视图，点击合适的轴得到枪模的侧视图。   
 ::: tip
 在默认枪械包中，我们通常让侧视图中的枪口朝左。这样能获得做好的视觉效果。   
 :::
 ![Toggle View](./bb_toggle_view.png)  
-按z或在右上角图标中切换模型的显示模式，使模型显示为【实体】。此时模型在工程文件中显示为白色。    
+2. 按z或在右上角图标中切换模型的显示模式，使模型显示为【实体】。此时模型在工程文件中显示为白色。    
 ![entity mode](./bb_solid_mode.png)  
-按下Ctrl+P 进行截图并保存当前图片为.png格式    
-![Screenshot Model](./screenshot_save.png)     
+3. 按下Ctrl+P 进行截图并保存当前图片为.png格式    
+![Screenshot Model](./screenshot_save.png)   
+  
 这样，我们就得到了一个纯白色的枪械模型侧视图。
 ### 处理枪械侧视图为 HUD Icon
 HUD Icon 渲染的长宽比例为 3:1。所以如果你不希望你提供的枪械侧视图被拉伸，你应该用图片处理工具对侧视图进行缩放、裁剪，得到长宽像素比为 3:1 的图片。   
