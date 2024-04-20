@@ -30,10 +30,4 @@ tutorial_gun_pack
   "date": "2024-04-20"
 }
 ```
-(你可以跳过这一步)我们可以简单地进行语言文件的定义。在枪包命名空间目录下新建目录 lang/ ，然后新建文件 en_us.json ，在其中定义枪包的名称和描述文本。   
-``` json
-{
-  "pack.tutorial.name": "Tutorial Gun Pack",
-  "pack.tutorial.desc": "Just a gun pack for tutorial."
-}
-```
+可以注意到，在枪包描述文件里，我们使用了语言文件来定义枪包名称和描述文本。下一章中，我们将解析如何 [创建并使用语言文件](/zh/gunpack/language/)

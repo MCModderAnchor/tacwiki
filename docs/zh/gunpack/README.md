@@ -7,6 +7,7 @@
 ::: 
 ### 枪包详细构建教程
 - [创建第一个枪包](/zh/gunpack/first_gunpack/)
+- [创建并使用语言文件](/zh/gunpack/language/)
 - [创建第一把枪](/zh/gunpack/first_gun/)
 - [调整枪械模型定位组](/zh/gunpack/gun_positioning/)
 - [创建 HUD Icon](/zh/gunpack/hud_icon/)

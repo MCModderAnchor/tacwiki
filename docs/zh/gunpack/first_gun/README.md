@@ -45,9 +45,11 @@ tutorial_gun_pack
    │     │  └─ ak47.png
    │     └─ slot
    │        └─ ak47.png
-   └─ models
-      └─ gun
-         └─ ak47_geo.json
+   ├─ models
+   │  └─ gun
+   │     └─ ak47_geo.json
+   └─ lang
+      └─ en_us.json
 ```
 ### 创建枪械数据文件
 枪械定义文件应置于 guns/data/ 目录下。此文件用于定义枪械的各项属性，如伤害、弹容、射速等。接下来我们为 ak47 创建一个最基本的数据文件。   
@@ -181,6 +183,10 @@ tutorial_gun_pack
     "type": "rifle"
 }
 ```
+在语言文件中定义枪械的显示名称。向 lang/en_us.json 中添加: 
+``` json
+    "tutorial.gun.ak47.name": "AK47 Assult Rifle"
+```
 ### 检验你的成果
 经过上述步骤，此时你的枪包目录结构应该是这样:   
 ```
@@ -196,6 +202,8 @@ tutorial_gun_pack
    ├─ models
    │  └─ gun
    │     └─ ak47_geo.json
+   ├─ lang
+   │  └─ en_us.json
    └─ guns
       ├─ index
       │  └─ ak47.json
