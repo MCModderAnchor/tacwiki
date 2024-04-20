@@ -12,9 +12,16 @@
 3. 最后，导出基岩版模型。   
 ![Export Model](./export_model.png)    
 也不要忘记保存材质文件。   
-4. 你可以借助 BlockBench 的 Screenshot Model 功能生成一个背包 2D 贴图。   
-![Screenshot Model](./screenshot_model.png)    
-注意，此法生成的贴图是非矩形，你需要通过图片修改软件对其进行缩放或裁剪。
+4. 你可以借助 BlockBench 的 Screenshot Model 功能生成一个背包 2D 贴图。  
+在生成贴图时，推荐进行以下操作：  
+右键bb工作区界面，选择等轴视角右（2:1），并且关闭软件内阴影着色：  
+![Screenshot Model](./iso_r_scr.png)    
+![no shading](./no_shading_scr.png)  
+![save image](./save_scr.png)  
+
+注意，此法生成的贴图是非矩形，你需要通过图片修改软件对其进行缩放或裁剪。  
+对于游戏内背包及容器界面显示的图像，推荐的分辨率为**32x32正方形**。  
+
 ### 准备工作
 确定你已经准备好了如下材料：   
 - 模型文件: ak47_geo.json    
