@@ -1,11 +1,11 @@
 # 为枪械创建 HUD Icon
-我们可以使用 BlockBench 提供的 Screenshot Model 功能获取到枪械模型的平面图。
-使用bb编辑模式右下角的游标视图，点击选中侧视图（通常为西或东）
-![Toggle View](./bb_pivot.png)
-按z或在右上角图标中切换模型的显示模式，使模型显示为【实体】
-![entity mode](/bb_entity.png)
-按下Ctrl+P 进行截图并保存当前图片为.png格式
-![Screenshot Model](./screenshot_model.png)   
+我们可以使用 BlockBench 提供的 Screenshot Model 功能获取到枪械模型的平面图。  
+使用bb编辑模式右下角的游标视图，点击选中侧视图（通常为西或东）  
+![Toggle View](./bb_pivot.png)  
+按z或在右上角图标中切换模型的显示模式，使模型显示为【实体】。此时模型在工程文件中应显示为白色。    
+![entity mode](./bb_entity.png)  
+按下Ctrl+P 进行截图并保存当前图片为.png格式  
+![Screenshot Model](./screenshot_model.png)     
 模组要求 HUD Icon 满足以下两点：   
 - 图片长宽相等，且尽可能为 2 的整数次方
 - hud 有改色渲染需求，因此提供的原图应该为白色   
