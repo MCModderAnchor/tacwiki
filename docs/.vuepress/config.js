@@ -27,6 +27,7 @@ module.exports = {
                         children: [
                             '/zh/gunpack/first_gunpack/',
                             '/zh/gunpack/language/',
+                            '/zh/gunpack/first_gun/',
                             '/zh/gunpack/gun_positioning/',
                             '/zh/gunpack/hud_icon/',
                             '/zh/gunpack/gun_sound/',
