@@ -28,6 +28,10 @@
       }
     }
 ```
+其中，枪械的射程程序会自动计算。计算式为：   
+![Max Distance Calculate](./max_distance.png)   
+其中参数 speed、life 和 friction 来自第一章中枪械数据文件的定义。   
+算式中的子弹速度的单位是 格/tick，而 speed 参数的单位是 格/秒，因此子弹速度 = speed / 20。同理，子弹持续Tick = life * 20。   
 最后，你的枪械数据文件应该看起来像这样:    
 ``` json
 {
@@ -62,5 +66,3 @@
     ...
 }
 ```
-其中，「总射程」的数值来源于程序的计算，自己计算的时候要先将 speed 和 life 数值的时间单位转化为 tick (1 sec = 20 tick)，计算式为：  
-![Max Distance Calculate](./max_distance.png)   
