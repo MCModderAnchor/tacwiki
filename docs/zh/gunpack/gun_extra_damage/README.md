@@ -1,8 +1,6 @@
 # 额外伤害
 在之前的 [添加第一把枪](/zh/gunpack/first_gun/) 教程中，我们跳过了一个子弹属性——额外伤害属性。   
 额外伤害属性用于定义枪的：护甲穿透率 (原版护甲)、爆头伤害倍率、远距离伤害衰减、抵近射击伤害倍率。  
-其中，「总射程」的数值来源于程序的计算，要将 speed 和 life 数值的时间单位转化为 tick (1 sec = 20 tick)，最终计算式为：  
-![Max Distance Calculate](./max_distance.png)   
 事不宜迟，让我们为教程枪添加额外伤害属性。   
 在 guns/data/ak47_data.json 中，找到 "bullet" 子项，并向其中添加如下代码:   
 ``` json
@@ -64,3 +62,5 @@
     ...
 }
 ```
+其中，「总射程」的数值来源于程序的计算，自己计算的时候要先将 speed 和 life 数值的时间单位转化为 tick (1 sec = 20 tick)，计算式为：  
+![Max Distance Calculate](./max_distance.png)   
