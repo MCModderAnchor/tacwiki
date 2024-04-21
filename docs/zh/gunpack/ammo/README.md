@@ -3,7 +3,7 @@
 在本篇教程中，我们将添加一个自己定义的弹药类型，并且让教程枪使用它。      
 一个自定义的弹药可能需要以下模型:   
 - 弹药堆模型，用于制作台、展示框中渲染。
-- 子弹实体模型，通常用于 rpg 这种需要绘制出弹头的弹药。
+- 子弹实体模型，通常用于火箭弹等需要绘制出弹头的弹药。
 - 子弹壳模型，用于自动步枪抛壳的渲染。
 
 可能需要以下材质:   
@@ -26,5 +26,13 @@
 我们可以沿袭这种风格。    
 以下是教程创建的示例：   
 ![My Ammo Model](./my_ammo_model.png)   
-将模型导出并命名为 my_ammo_geo.json 放入枪包 models/ammo/ 路径下。
-将材质保存为 my_ammo.png 放入枪包  textures/ammo/uv/ 路径下。   
+特别地，弹药堆模型支持两个定位组: fixed(展示框模型定位组)、thirdperson_hand(第三人称手部模型定位组) 和 ground(掉落物模型定位组)。   
+这两个定位组的放置方法和效果与枪械模型的相同，你可以[去这里看看](/zh/gunpack/gun_positioning/)。    
+我们将模型导出并命名为 my_ammo_geo.json 放入枪包 models/ammo/ 路径下。    
+将材质保存为 my_ammo.png 放入枪包  textures/ammo/uv/ 路径下。    
+### 制作弹药实体模型(非必须)
+弹药实体模型通常用于火箭弹等需要绘制出弹头的弹药。本教程简单地制作了一个弹药实体模型用于展示效果。如果你没有需要，你可以跳过这一步。   
+![Ammo Entity Model](./ammo_entity_model.png)   
+我们将模型导出并命名为 my_ammo_entity_geo.json 并放入枪包 models/ammo_entity/ 路径下。   
+将材质保存为 my_ammo_entity.png 并放入枪包 textures/ammo_entity/ 路径下。   
+### 制作弹壳模型(非必须)
