@@ -35,12 +35,13 @@ module.exports = {
                             '/zh/gunpack/ammo/',
                             '/zh/gunpack/shell_ejection/',
                             '/zh/gunpack/muzzle_flash/',
-                            '/zh/gunpack/lod/',
+                            '/zh/gunpack/hand_pos/',
                             '/zh/gunpack/animation/',
                             '/zh/gunpack/ica/',
                             '/zh/gunpack/bolt_type/',
                             '/zh/gunpack/attachment/',
                             '/zh/gunpack/gun_refit/',
+                            '/zh/gunpack/lod/',
                             '/zh/gunpack/recipe/',
                             '/zh/gunpack/tag/'
                         ]
