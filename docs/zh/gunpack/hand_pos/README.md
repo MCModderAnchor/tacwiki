@@ -10,9 +10,10 @@ Size 设置为 (4, 12, 4)。
 ![Left Hand Pos](./lefthand_pos.png)   
 最后移动、旋转整个组到合适的位置。
 ::: tip
-用一句话来概括，其实就是: 保证用于预览的手臂方块的 Size 值为 (4, 12, 4)，且 Pivot Point 数值 为 lefthand_pos 的 Pivot Point 数值的 (+4, +0, -2)。
+用一句话来概括，其实就是: 保证用于预览的手臂方块的 Size 值固定为 (4, 12, 4)，且 Pivot Point 数值 为 lefthand_pos 的 Pivot Point 数值的 (+4, +0, -2)。
 :::
-2. righthand_pos 的放置方式与 lefthand_pos 类似，不同的是，方块的 Position 值改为 (-8, 0, -2)。   
+如下图经过位移和旋转后，手臂预览模型的 Position 数值 为 (7, 0, -2) , 与 lefthand_pos 组的 Pivot Point 相对值仍然保持  (+4, +0, -2)。   
+![Left Hand Pos Rot](./lefthand_pos_rot.png)   
+2. righthand_pos 的放置方式与 lefthand_pos 类似，不同的是，方块的 Position 值改为 (-8, 0, -2)，即与 righthand_pos 分组的 Pivot Point 相对值固定为 (-8, +0, -2)。   
 如图所示:   
 ![Right Hand Pos](./righthand_pos.png)   
-
