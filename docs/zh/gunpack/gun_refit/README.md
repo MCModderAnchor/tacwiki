@@ -6,17 +6,17 @@
 
 >在枪械模型中，如果一个分组被命名为以下名称之一，它将会被配件影响。
 
-**默认枪口**：muzzle_default
-在不安装任何枪口下渲染的枪口
-**默认机瞄**：sight
-在不安装任何瞄具下渲染的机瞄配件
-**默认枪托**：stock_default
-在不安装任何枪托下渲染的枪托
-**默认护木与战术护木**: handguard_default/handguard_tactical
-在不安装握把配件时渲染: handguard_default
-在安装任意握把配件时渲染: handguard_tactical
-**镜桥**：mount
-在安装任意瞄具后渲染的镜桥
+**默认枪口**：muzzle_default  
+在不安装任何枪口下渲染的枪口  
+**默认机瞄**：sight  
+在不安装任何瞄具下渲染的机瞄配件  
+**默认枪托**：stock_default  
+在不安装任何枪托下渲染的枪托  
+**默认护木与战术护木**: handguard_default/handguard_tactical  
+在不安装握把配件时渲染: handguard_default  
+在安装任意握把配件时渲染: handguard_tactical  
+**镜桥**：mount  
+在安装任意瞄具后渲染的镜桥   
 
 ## 设置定位组
 ### 装配界面摄像机定位组
@@ -26,13 +26,13 @@
 
 以下是所有的装配界面中枪械模型的摄像机定位组。你可以在 blockbench 为它们添加摄像机用于预览。
 
-**总览**：refit_view
-**枪口**：refit_muzzle_view
-**枪托**：refit_stock_view
-**瞄具**：refit_scope_view
-**弹匣**：refit_extended_mag_view
-**握把**：refit_grip_view
-**镭射**：refit_laser_view
+**总览**：refit_view  
+**枪口**：refit_muzzle_view  
+**枪托**：refit_stock_view  
+**瞄具**：refit_scope_view  
+**弹匣**：refit_extended_mag_view    
+**握把**：refit_grip_view  
+**镭射**：refit_laser_view  
 ![](./view.png)
 
 ### 模型定位组
@@ -40,11 +40,11 @@
 
 1. 选择你需要的定位组，在合适的分组子目录下创建它们，确保它们能够受到枪械动画的影响。以下是支持的配件定位组的名称
 
-   **枪口**：muzzle_pos
-   **镭射**：laser_pos
-   **瞄具**：scope_pos
-   **枪托**：stock_pos
-   **握把**：grip_pos
+   **枪口**：muzzle_pos  
+   **镭射**：laser_pos  
+   **瞄具**：scope_pos  
+   **枪托**：stock_pos  
+   **握把**：grip_pos   
 
 2. 移动配件定位组到枪械对应的位置，下图以**瞄具scope_pos**为例。一般来说，我们需要将定位组放在导轨的接触面上。
 
@@ -54,11 +54,11 @@
 
 ### 弹匣、扩容弹匣
 
-如果你需要使用扩容弹匣，你**必须**创建一个 **magazine** 分组，然后将普通弹匣和扩容弹匣分组全部置入其中，否则弹匣不会正常渲染。
+如果你需要使用扩容弹匣，你**必须**创建一个 **magazine** 分组，然后将普通弹匣和扩容弹匣分组全部置入其中，否则弹匣不会正常渲染。  
 
-普通弹匣模型分组的名称应该被改为：**mag_standard**。
+普通弹匣模型分组的名称应该被改为：**mag_standard**。  
 
-扩容弹匣模型从 1 级 到 3级 分别应该被命名为：**mag_extended_1** ~ **mag_extended_3**。
+扩容弹匣模型从 1 级 到 3级 分别应该被命名为：**mag_extended_1** ~ **mag_extended_3**。  
 
 ![mag_exd](./mag_exd.png)
 
