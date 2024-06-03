@@ -3,7 +3,6 @@
 [[toc]]
 ## 分组
 >为方便动画制作与程序读取，在开始制作动画之前应提前将模型分好组。以下为模型分组建议。   
-
 ------------
 
 **硬性要求**   
@@ -30,9 +29,14 @@
 
 ------------
 
+### 分好组的手部模型下载
+
+[夸克网盘](https://pan.quark.cn/s/03b2c15e7403)
+[百度网盘](https://pan.baidu.com/s/1wgj3tFTzPd2ZOaRbkgSaYw?pwd=17e0)
+[谷歌网盘](https://drive.google.com/drive/folders/1C8CsGzRCsaQfA5ako51ljNKG5VOER1lF?usp=drive_link)
+
 
 ------------
-
 
 ![group](https://s1.3hov.com/lesraisins/i/2024/05/07/fenzu.png)
 
@@ -133,7 +137,8 @@
 
 
 #### inspect_empty
-空仓检视动画，当武器处于空仓状态时播放的检视动画
+空仓检视动画，当武器处于空仓状态时播放的检视动画。
+如果缺少inspect_empty动画则空仓时无法触发检视
 - 动画起始状态和终止状态应该与 static_idle 完全相同
 
 ------------
@@ -144,6 +149,62 @@
 - 约束组动画：制作约束组动画后可以使拉栓时枪械始终围绕约束点范围内运动。
 
 ------------
+
+#### 运动类动画
+
+------------
+
+##### 跑步类
+
+**run_start**
+进入奔跑状态时的动画
+- 默认动画中包含此动画
+- 动画起始状态应与static_idle完全相同
+
+**run**
+奔跑时的动画
+- 默认动画中包含此动画
+- 动画类型：循环
+- 动画起时/终止状态与run_start相同
+
+**run_hold**
+奔跑时跳跃的动画
+- 默认动画中包含此动画
+- 动画类型：静止
+
+**run_end**
+奔跑结束时的动画
+- 默认动画中包含此动画
+- 动画起始状态应与run相同
+- 动画终止状态应与static_idle完全相同
+
+------------
+
+##### 走路类
+
+**walk_aiming**
+走路时瞄准的动画
+- 默认动画中包含此动画
+- 动画类型：循环
+- 动画起始/终止状态应与static_idle完全相同
+
+**walk_forward**
+【向前】走路时的动画
+- 默认动画中包含此动画
+- 动画类型：循环
+- 动画起始/终止状态应与static_idle完全相同
+
+**walk_sideway**
+【横向】走路时的动画
+- 默认动画中包含此动画
+- 动画类型：循环
+- 动画起始/终止状态应与static_idle完全相同
+
+**walk_backward**
+【向后】走路时的动画
+- 默认动画中包含此动画
+- 动画类型：循环
+- 动画起始/终止状态应与static_idle完全相同
 
 ## 动画制作
 >下文仅为作者对blockbench软件制作动画的说明
@@ -179,5 +240,31 @@
 ::: tip
 烘培动画仅应当在导出动画前进行。如果你希望动画能够二次修改，你应当将原始的动画文件拷贝并保存，然后再进行烘培。
 :::
+**需用插件：**Bakery, https://github.com/JannisX11/blockbench-plugins/tree/master/plugins/bakery.js
 **烘焙方法：**载入动画，选中贝塞尔曲线插值的关键帧，点击菜单栏 动画-烘焙动画
 ![bake](https://s1.3hov.com/lesraisins/i/2024/05/07/bake.png)
+
+------------
+
+## 导出动画
+>动画支持gltf与json动画格式
+
+### 导出glTF动画格式
+![gltf](https://s1.3hov.com/lesraisins/i/2024/06/02/export_gltf.png)
+
+### 导出json动画格式
+![json](https://s1.3hov.com/lesraisins/i/2024/06/02/export_json.png)
+
+------------
+
+## 填写枪械效果文件
+>只有填写完枪械效果文件，才会在游戏内正确加载动画
+>在gunname_display.json中添加
+
+``` json
+  // 调用的动画名，会在包目录下的 animations 文件夹中寻找，不建议为空
+  "animation": "tacz:ak47",
+  // 指定使用缺省动画，可为空。如果上文指定的动画文件里缺少某个动画，如 draw 动画，则会从缺省动画拷贝。
+  // 值可为 rifle、pistol
+  "use_default_animation": "rifle",
+```
