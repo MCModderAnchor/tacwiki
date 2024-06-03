@@ -15,7 +15,12 @@
 ![Attachment Model](./scope_groups.png)  
 ![Attachment Model](./scope_model.png)  
 ![Attachment Model](./ocular.png)  
-![attachment model](./division.png)  
+![attachment model](./division.png)   
+3. 面剔除与枢轴点居中： 
+**ocular**组内的所有块都需剔除除南面以外的所有面  
+![remove_face](https://s1.3hov.com/lesraisins/i/2024/06/02/scope_remove_face.png)
+**所有组**的枢轴点都需设置为居中，即：确保枢轴点在你瞄准时处于视野正中央。  
+![pivot_point](https://s1.3hov.com/lesraisins/i/2024/06/02/scope_pivot_point.png)
 ::: tip
 你可以向scope_view 分组中添加摄像机，设定预览fov为70，预览游戏内开镜的视野；  
 ![attachment model](./scope_view.png)  
@@ -130,6 +135,31 @@ tutorial_gun_pack
 ``` json
     "tutorial.attachment.silencer.name": "Pistol Silencer"
 ```
+
+### 创建配件支持文件
+为了使新建的配件可以安装到对应的枪械上，请根据以下文档设置对应的tags文件
+#### 专属配件
+如果你想让你新建的配件只能在某把枪上使用
+1. 在tutorial_gun_pack/tutorial/路径下创建文件夹tags/attachments/allow_attachments
+2. 以ak47为例，如你想让ak47仅支持瞄具"scope_re",则在allow_attachments文件夹下创建json文件ak47.json，并在内部填写以下代码
+``` json
+[
+  //tutorial为自定义瞄具所在的枪包，scope_re为瞄具名
+  "tutorial:scope_re"
+]
+```
+#### 通用配件
+如果你想让所有支持瞄具的枪都能使用你所制作的scope_re瞄具，则参考以下文档
+1. 在tutorial_gun_pack路径下创建tacz\custom\tacz_default_gun\tacz\tags\attachments
+2. 在文件夹attachments下创建文件scope.json，并填写以下代码
+``` json
+[
+  "tutorial:scope_re"
+]
+```
+
+
+
 ### 检验你的成果
 经过上述步骤，此时你的枪包目录结构应该是这样:
 ```
