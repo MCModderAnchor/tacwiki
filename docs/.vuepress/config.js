@@ -47,8 +47,13 @@ module.exports = {
                         ]
                     },
                     {
-                        title: '模型说明文档',
-                        path: '/zh/model/'
+                        title: '模型建造指南',
+                        path: '/zh/model_guide/',
+                        children: [
+                            '/zh/model_guide/setting/',
+                            '/zh/model_guide/model/',
+                            '/zh/model_guide/texture/'
+                        ]
                     }
                 ]
             }

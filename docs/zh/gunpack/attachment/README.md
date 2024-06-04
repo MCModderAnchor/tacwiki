@@ -15,12 +15,12 @@
 ![Attachment Model](./scope_groups.png)  
 ![Attachment Model](./scope_model.png)  
 ![Attachment Model](./ocular.png)  
-![attachment model](./division.png)  
-3. 面剔除与枢轴点居中：
-**ocular**组内的所有块都需剔除除南面以外的所有面
-![remove_face](https://s1.3hov.com/lesraisins/i/2024/06/02/scope_remove_face.png)
-**所有组**的枢轴点都需设置为居中
-![pivot_point](https://s1.3hov.com/lesraisins/i/2024/06/02/scope_pivot_point.png)
+![attachment model](./division.png)   
+3. 面剔除与枢轴点居中： 
+**ocular**组内的所有块都需剔除除南面以外的所有面  
+![remove_face](./scope_remove_face.png)
+**所有组**的枢轴点都需设置为居中，即：确保枢轴点在你瞄准时处于视野正中央。  
+![pivot_point](./scope_pivot_point.png)
 ::: tip
 你可以向scope_view 分组中添加摄像机，设定预览fov为70，预览游戏内开镜的视野；  
 ![attachment model](./scope_view.png)  
