@@ -3,11 +3,6 @@
 [[toc]]
 ## 分组
 >为方便动画制作与程序读取，在开始制作动画之前应提前将模型分好组。以下为模型分组建议。   
-### 分好组的手部模型下载
-[夸克网盘](https://pan.quark.cn/s/03b2c15e7403)
-[百度网盘](https://pan.baidu.com/s/1wgj3tFTzPd2ZOaRbkgSaYw?pwd=17e0)
-[谷歌网盘](https://drive.google.com/drive/folders/1C8CsGzRCsaQfA5ako51ljNKG5VOER1lF?usp=drive_link)
-
 ------------
 
 **硬性要求**   
@@ -34,9 +29,14 @@
 
 ------------
 
+### 分好组的手部模型下载
+
+[夸克网盘](https://pan.quark.cn/s/03b2c15e7403)
+[百度网盘](https://pan.baidu.com/s/1wgj3tFTzPd2ZOaRbkgSaYw?pwd=17e0)
+[谷歌网盘](https://drive.google.com/drive/folders/1C8CsGzRCsaQfA5ako51ljNKG5VOER1lF?usp=drive_link)
+
 
 ------------
-
 
 ![group](https://s1.3hov.com/lesraisins/i/2024/05/07/fenzu.png)
 
