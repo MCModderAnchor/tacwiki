@@ -6,12 +6,10 @@
 
 >在枪械模型中，如果一个分组被命名为以下名称之一，它将会被配件影响。
 
-**默认枪口**：muzzle_default  
-在不安装任何枪口下渲染的枪口  
+**默认配件**：xxx_default  
+在不安装任何配件时渲染的配件模型，其中 xxx 替换为具体的配件类型：scope、grip、stock、muzzle、laser、extended_mag  
 **默认机瞄**：sight  
 在不安装任何瞄具下渲染的机瞄配件  
-**默认枪托**：stock_default  
-在不安装任何枪托下渲染的枪托  
 **默认护木与战术护木**: handguard_default/handguard_tactical  
 在不安装握把配件时渲染: handguard_default  
 在安装任意握把配件时渲染: handguard_tactical  
