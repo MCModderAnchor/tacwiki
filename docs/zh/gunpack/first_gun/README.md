@@ -3,8 +3,9 @@
 ### 创建枪械模型
 我们先简单地创建一个模型用于教程。   
 ::: tip
-注意，如果你需要创建一个精细且复杂的枪械模型，推荐你先阅读我们的[枪械模型推荐工作流]()   
+注意，如果你需要创建一个精细且复杂的枪械模型，推荐你先阅读我们的[枪械模型推荐工作流](/zh/model_guide/)   
 :::
+
 1. 首先，新建一个基岩版实体模型。   
 ![Create Bedrock Gun Model](./create_bedrock_gun_model.png)   
 2. 然后，完成你的建模工作。    
@@ -179,8 +180,15 @@ tutorial_gun_pack
     "display": "tutorial:ak47_display",
     // 枪械参数文件，对应 guns/data/ak47_data.json，其中前缀"guns/data/"和后缀".json"不需要包含。
     "data": "tutorial:ak47_data",
-    // 创造栏标签页类别，直接用默认枪包定义的 rifle (步枪0
-    "type": "rifle"
+    // 枪械种类，用于创造标签栏归类。
+    // 所有可用分类：pistol(手枪) sniper(狙击枪) rifle(步枪) shotgun(霰弹枪) smg(冲锋枪) 
+    //             mg(机枪) rpg(火箭筒)
+    "type": "rifle",
+    // 枪械的物品类型，决定枪械的逻辑，如开火、装填等，默认是 modern_kinetic (现代动能枪械)
+    "item_type": "modern_kinetic",
+    // 排序数，决定了在创造模式标签页中的顺序
+    // 数字越小，优先级越高
+    "sort": 10
 }
 ```
 在语言文件中定义枪械的显示名称。向 lang/en_us.json 中添加: 
