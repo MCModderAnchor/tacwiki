@@ -42,8 +42,7 @@ module.exports = {
                             '/zh/gunpack/attachment/',
                             '/zh/gunpack/gun_refit/',
                             '/zh/gunpack/lod/',
-                            '/zh/gunpack/recipe/',
-                            '/zh/gunpack/tag/'
+                            '/zh/gunpack/recipe/'
                         ]
                     },
                     {
