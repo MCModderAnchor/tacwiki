@@ -25,7 +25,7 @@
 - [低精度模型](/zh/gunpack/lod/)
 - [配方](/zh/gunpack/recipe/)
 ### 枪械包参考文件结构
-[tac 默认枪包](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun) 采用了这个文件结构。
+[tac 默认枪包](https://github.com/MCModderAnchor/TACZ/tree/1.20.1/src/main/resources/assets/tacz/custom/tacz_default_gun/tacz) 采用了这个文件结构。
 ```
 根目录
 └─── tac   # 枪械包的命名空间，命名空间由此文件夹决定
