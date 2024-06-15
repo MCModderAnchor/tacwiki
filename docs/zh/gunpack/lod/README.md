@@ -68,6 +68,7 @@ tutorial_gun_pack
 ## 配件的低精度模型
 
 ![高精度模型](./lod_scope.png)![低精度模型](./lod_scope_lod.png)
+
 当你完成了低精度模型的建模时，导出基岩版模型和相关贴图，这里以 acog 为例。
 
 ### 给配件lod建模
@@ -119,6 +120,7 @@ tutorial_gun_pack
 
 做完这些后启动游戏（或者游戏内使用 /tacz reload ）。
 如果你看到如下画面，说明配件低精度模型添加成功了。
+
 ![完成](./lod_scope_finish.png)
 
 ## 低精度模型的全局调控
