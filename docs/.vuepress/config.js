@@ -17,10 +17,9 @@ export default defineUserConfig({
                 lang: 'zh-CN',
                 title: '永恒枪械工坊',
                 sidebar: [
-                    '/zh/',
                     {
-                        title: '枪包说明文档',
-                        path: '/zh/gunpack/',
+                        text: '枪包说明文档',
+                        link: '/zh/gunpack/',
                         children: [
                             '/zh/gunpack/first_gunpack/',
                             '/zh/gunpack/language/',
@@ -43,8 +42,8 @@ export default defineUserConfig({
                         ]
                     },
                     {
-                        title: '模型建造指南',
-                        path: '/zh/model_guide/',
+                        text: '模型建造指南',
+                        link: '/zh/model_guide/',
                         children: [
                             '/zh/model_guide/setting/',
                             '/zh/model_guide/model/',
