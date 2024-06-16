@@ -1,8 +1,10 @@
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defineUserConfig } from 'vuepress'
 import { hopeTheme } from "vuepress-theme-hope";
 
-module.exports = {
-    theme: hopeTheme({
-    }),
+export default defineUserConfig({
+    bundler: viteBundler(),
+    theme: hopeTheme(),
     locales: {
         '/': {
             lang: 'en-US',
@@ -62,4 +64,4 @@ module.exports = {
             }
         },
     }
-}
+})
