@@ -17,8 +17,8 @@ jobs:
         TARGET_REPO: MCModderAnchor/tacwiki
         TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: |
-          pnpm add vue
-          yum install -y expect
+          apt-get update
+          apt-get install -y expect
           cat <<'EOF' > theme-setup-script.exp
           #!/usr/bin/expect -f
           set timeout -1
