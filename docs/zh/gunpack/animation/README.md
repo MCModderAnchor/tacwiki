@@ -247,12 +247,12 @@
 ------------
 
 ## 导出动画
->动画支持gltf与json动画格式
+>动画支持 gltf 与 Bedrock 两种动画格式
 
-### 导出glTF动画格式
+### 导出 gltf 动画格式（后缀名 .gltf）
 ![gltf](https://s1.3hov.com/lesraisins/i/2024/06/02/export_gltf.png)
 
-### 导出json动画格式
+### 导出 Bedrock 动画格式（后缀名 .animation.json）
 ![json](https://s1.3hov.com/lesraisins/i/2024/06/02/export_json.png)
 
 ------------
