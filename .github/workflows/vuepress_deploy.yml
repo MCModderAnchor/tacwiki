@@ -10,6 +10,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@master
       env:
