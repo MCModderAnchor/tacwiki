@@ -3,23 +3,7 @@ import { defineUserConfig } from 'vuepress'
 import { hopeTheme } from "vuepress-theme-hope";
 
 export default defineUserConfig({
-    bundler: viteBundler(),
-    theme: hopeTheme(),
-    locales: {
-        '/': {
-            lang: 'en-US',
-            title: 'Timeless and Classics guns Wiki',
-            description: 'A wiki related to Minecraft mod: Timeless and Classics guns'
-        },
-        '/zh/': {
-            lang: 'zh-CN',
-            title: '永恒枪械工坊',
-            description: '永恒枪械工坊帮助文档'
-        }
-    },
-    plugins: [
-    ],
-    themeConfig: {
+    bundler: viteBundler({
         locales: {
             '/': {
                 sidebar: [
@@ -64,6 +48,21 @@ export default defineUserConfig({
                     }
                 ]
             }
+        }
+    }),
+    theme: hopeTheme(),
+    locales: {
+        '/': {
+            lang: 'en-US',
+            title: 'Timeless and Classics guns Wiki',
+            description: 'A wiki related to Minecraft mod: Timeless and Classics guns'
         },
-    }
+        '/zh/': {
+            lang: 'zh-CN',
+            title: '永恒枪械工坊',
+            description: '永恒枪械工坊帮助文档'
+        }
+    },
+    plugins: [
+    ]
 })
