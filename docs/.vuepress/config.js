@@ -3,7 +3,8 @@ import { defineUserConfig } from 'vuepress'
 import { hopeTheme } from "vuepress-theme-hope";
 
 export default defineUserConfig({
-    bundler: viteBundler({
+    bundler: viteBundler(),
+    theme: hopeTheme({
         locales: {
             '/': {
                 sidebar: [
@@ -50,7 +51,6 @@ export default defineUserConfig({
             }
         }
     }),
-    theme: hopeTheme(),
     locales: {
         '/': {
             lang: 'en-US',
