@@ -52,6 +52,7 @@ export default defineUserConfig({
                             '/zh/gunpack/ammo/',
                             '/zh/gunpack/shell_ejection/',
                             '/zh/gunpack/muzzle_flash/',
+                            '/zh/gunpack/render_text',
                             '/zh/gunpack/hand_pos/',
                             '/zh/gunpack/animation/',
                             '/zh/gunpack/ica/',

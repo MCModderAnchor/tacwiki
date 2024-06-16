@@ -16,6 +16,7 @@
 - [创建弹药](/zh/gunpack/ammo/)
 - [抛壳](/zh/gunpack/shell_ejection/)
 - [枪口火焰](/zh/gunpack/muzzle_flash/)
+- [枪械模型文字渲染](/zh/gunpack/render_text/)
 - [手臂定位组](/zh/gunpack/hand_pos/)
 - [枪械动画](/zh/gunpack/animation/)
 - [动画约束](/zh/gunpack/ica/)
