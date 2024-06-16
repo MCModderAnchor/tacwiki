@@ -22,7 +22,7 @@ jobs:
           cat <<'EOF' > theme-setup-script.exp
           #!/usr/bin/expect -f
           set timeout -1
-          pnpm create vuepress-theme-hope add docs
+          spawn pnpm create vuepress-theme-hope add docs
           expect {
             eof { break }
             timeout { send "\r"; exp_continue }
