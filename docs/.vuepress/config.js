@@ -6,11 +6,22 @@ export default defineUserConfig({
     bundler: viteBundler(),
     theme: hopeTheme({
         plugins: {
-            searchPro: true
+            searchPro: {
+                indexContent: false,
+                autoSuggestions: false,
+                queryHistoryCount: 0,
+                resultHistoryCount: 0
+            },
+            mdEnhance: {
+                katex: true
+            }
         },
         repo: "https://github.com/MCModderAnchor/tacwiki",
         repoLabel: "GitHub",
         repoDisplay: true,
+        docsDir: "docs",
+        lastUpdated: true,
+        contributors: true,
         locales: {
             '/': {
                 selectLanguageName: 'English',
