@@ -16,6 +16,20 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.PERSONAL_SECRET }}
         TARGET_REPO: MCModderAnchor/tacwiki
         TARGET_BRANCH: gh_pages
-        BUILD_SCRIPT: pnpm create vuepress-theme-hope add docs\n\n && pnpm build
+        BUILD_SCRIPT: |
+          pnpm add vue
+          yum install -y expect
+          cat <<'EOF' > theme-setup-script.exp
+          #!/usr/bin/expect -f
+          set timeout -1
+          pnpm create vuepress-theme-hope add docs
+          expect {
+            eof { break }
+            timeout { send "\r"; exp_continue }
+            default { send "\r"; exp_continue }
+          }
+          EOF
+          expect theme-setup-script.exp
+          pnpm build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: tacwiki.mcma.club
