@@ -18,7 +18,7 @@ jobs:
         TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: |
           pnpm remove vuepress
-          pnpm add -D vuepress@next vue
+          pnpm add -D vuepress@next vue @vuepress/bundler-vite
           pnpm add vuepress-theme-hope
           pnpm build
         BUILD_DIR: docs/.vuepress/dist/
