@@ -7,15 +7,13 @@ export default defineUserConfig({
     theme: hopeTheme({
         locales: {
             '/': {
-                lang: 'en-US',
-                title: 'Timeless and Classics guns Wiki',
+                selectLanguageName: 'English',
                 sidebar: [
                     '/'
                 ]
             },
             '/zh/': {
-                lang: 'zh-CN',
-                title: '永恒枪械工坊',
+                selectLanguageName: '简体中文',
                 sidebar: [
                     {
                         text: '枪包说明文档',
