@@ -52,6 +52,16 @@ export default defineUserConfig({
             }
         }
     }),
+    locales: {
+        '/': {
+          lang: 'en-US',
+          title: 'Timeless and Classics guns Wiki'
+        },
+        '/zh/': {
+            lang: 'zh-CN',
+            title: '永恒枪械工坊'
+        }
+    },
     plugins: [
     ]
 })
