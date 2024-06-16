@@ -17,6 +17,8 @@ export default defineUserConfig({
             description: '永恒枪械工坊帮助文档'
         }
     },
+    plugins: [
+    ],
     themeConfig: {
         locales: {
             '/': {
