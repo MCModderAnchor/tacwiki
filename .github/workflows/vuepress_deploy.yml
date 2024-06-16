@@ -18,18 +18,7 @@ jobs:
         TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: |
           apt-get update
-          apt-get install -y expect
-          cat <<'EOF' > theme-setup-script.exp
-          #!/usr/bin/expect -f
-          set timeout 1
-          spawn pnpm add vuepress-theme-hope
-          expect {
-            eof { break }
-            timeout { send "\r"; exp_continue }
-            default { send "\r"; exp_continue }
-          }
-          EOF
-          expect theme-setup-script.exp
+          pnpm add vuepress-theme-hope
           pnpm build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: tacwiki.mcma.club
