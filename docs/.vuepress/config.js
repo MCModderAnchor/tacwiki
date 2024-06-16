@@ -7,11 +7,15 @@ export default defineUserConfig({
     theme: hopeTheme({
         locales: {
             '/': {
+                lang: 'en-US',
+                title: 'Timeless and Classics guns Wiki',
                 sidebar: [
                     '/'
                 ]
             },
             '/zh/': {
+                lang: 'zh-CN',
+                title: '永恒枪械工坊',
                 sidebar: [
                     '/zh/',
                     {
@@ -51,18 +55,6 @@ export default defineUserConfig({
             }
         }
     }),
-    locales: {
-        '/': {
-            lang: 'en-US',
-            title: 'Timeless and Classics guns Wiki',
-            description: 'A wiki related to Minecraft mod: Timeless and Classics guns'
-        },
-        '/zh/': {
-            lang: 'zh-CN',
-            title: '永恒枪械工坊',
-            description: '永恒枪械工坊帮助文档'
-        }
-    },
     plugins: [
     ]
 })
