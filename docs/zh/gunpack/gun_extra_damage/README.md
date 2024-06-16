@@ -29,7 +29,9 @@
 ```
 其中，枪械的射程程序会自动计算。计算式为：
 
-![range](./range.png)
+$$
+range = \frac{speed}{20}·\frac{1-(1-f)^{life*20}}{f}
+$$
 
 其中参数 speed、life 和 f (friction) 来自第一章中 [枪械数据文件的定义](/zh/gunpack/first_gun/#创建枪械数据文件)。   
 
