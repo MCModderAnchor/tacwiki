@@ -25,8 +25,8 @@ jobs:
           spawn pnpm create vuepress-theme-hope add docs
           expect {
             eof { break }
-            timeout { send "\r"; exp_continue }
-            default { send "\r"; exp_continue }
+            timeout { send "\n"; exp_continue }
+            default { send "\n"; exp_continue }
           }
           EOF
           expect theme-setup-script.exp
