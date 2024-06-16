@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: vuepress-deploy
-      uses: IT4Change/vuepress-build-and-deploy@master
+      uses: 286799714/vuepress-build-and-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.PERSONAL_SECRET }}
         TARGET_REPO: MCModderAnchor/tacwiki
