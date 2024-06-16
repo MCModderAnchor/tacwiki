@@ -16,6 +16,6 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.PERSONAL_SECRET }}
         TARGET_REPO: MCModderAnchor/tacwiki
         TARGET_BRANCH: gh_pages
-        BUILD_SCRIPT: pnpm create vuepress-theme-hope add docs && pnpm build
+        BUILD_SCRIPT: pnpm create vuepress-theme-hope add docs\n\n && pnpm build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: tacwiki.mcma.club
