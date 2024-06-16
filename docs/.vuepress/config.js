@@ -1,4 +1,8 @@
+import { hopeTheme } from "vuepress-theme-hope";
+
 module.exports = {
+    theme: hopeTheme({
+    }),
     locales: {
         '/': {
             lang: 'en-US',
