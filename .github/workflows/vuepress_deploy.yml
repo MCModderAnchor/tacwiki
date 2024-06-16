@@ -17,8 +17,7 @@ jobs:
         TARGET_REPO: MCModderAnchor/tacwiki
         TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: |
-          pnpm remove vue
-          pnpm add vue@3
+          pnpm add vue@3 @vue/server-renderer@3
           pnpm add vuepress-theme-hope
           pnpm build
         BUILD_DIR: docs/.vuepress/dist/
