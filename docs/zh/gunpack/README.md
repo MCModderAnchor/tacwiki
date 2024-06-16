@@ -40,8 +40,8 @@
      │         └─── 9mm.json
      │
      ├─── animations   # 动画文件夹
-     │    ├─── ak47.gltf  # gltf 动画文件
-     │    └─── m16.gltf
+     │    ├─── ak47.animation.json  # Bedrock 动画文件
+     │    └─── m16.gltf             # gltf 文件
      │
      ├─── attachments
      │    ├─── data   # 配件参数
