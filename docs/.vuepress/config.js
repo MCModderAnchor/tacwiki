@@ -5,6 +5,9 @@ import { hopeTheme } from "vuepress-theme-hope";
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: hopeTheme({
+        repo: "https://github.com/MCModderAnchor/tacwiki",
+        repoLabel: "GitHub",
+        repoDisplay: true,
         locales: {
             '/': {
                 selectLanguageName: 'English',
@@ -14,6 +17,11 @@ export default defineUserConfig({
             },
             '/zh/': {
                 selectLanguageName: '简体中文',
+                navbarLayout: {
+                    start: ["Brand"],
+                    center: ["Links"],
+                    end: ["Language", "Repo", "Outlook", "Search"],
+                },
                 sidebar: [
                     {
                         text: '枪包说明文档',
