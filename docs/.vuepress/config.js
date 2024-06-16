@@ -5,6 +5,9 @@ import { hopeTheme } from "vuepress-theme-hope";
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: hopeTheme({
+        plugins: {
+            searchPro: true
+        },
         repo: "https://github.com/MCModderAnchor/tacwiki",
         repoLabel: "GitHub",
         repoDisplay: true,
@@ -26,6 +29,7 @@ export default defineUserConfig({
                     {
                         text: '枪包说明文档',
                         link: '/zh/gunpack/',
+                        collapsible: true,
                         children: [
                             '/zh/gunpack/first_gunpack/',
                             '/zh/gunpack/language/',
@@ -50,6 +54,7 @@ export default defineUserConfig({
                     {
                         text: '模型建造指南',
                         link: '/zh/model_guide/',
+                        collapsible: true,
                         children: [
                             '/zh/model_guide/setting/',
                             '/zh/model_guide/model/',
