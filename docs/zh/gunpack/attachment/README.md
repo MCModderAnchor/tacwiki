@@ -113,7 +113,14 @@ tutorial_gun_pack
   // 如果配件是瞄具，且为红点或全息瞄具，此选项应为 true
   "sight": true,
   // 开镜后，枪身和瞄具渲染的 fov，默认情况下，mc 渲染手部模型的 fov 为 70
-  "fov": 70.0
+  "fov": 70.0,
+  // 音效，只在装卸配件时自己能听到
+  "sounds": {
+    // 安装时的音效。
+    "install": "tacz:attachments/scope_general_e",
+    // 卸下时的音效。
+    "uninstall": "tacz:attachments/scope_general_e"
+  }
 }
 ```
 ### 创建配件定义文件
