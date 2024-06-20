@@ -13,6 +13,18 @@
   "license": "MIT",
   "author": "MaydayMemory | Tartaric_acid",
   "devDependencies": {
+    "vue-template-compiler": "^2.7.16",
     "vuepress": "^1.9.7"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCModderAnchor/tacwiki.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MCModderAnchor/tacwiki/issues"
+  },
+  "homepage": "https://github.com/MCModderAnchor/tacwiki#readme"
 }

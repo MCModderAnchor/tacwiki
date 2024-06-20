@@ -15,7 +15,41 @@ module.exports = {
         locales: {
             '/': {
                 sidebar: [
-                    '/'
+                    '/',
+                    {
+                        title: 'Gunpack Building Guide',
+                        path: '/gunpack/',
+                        children: [
+                            '/gunpack/first_gunpack/',
+                            '/gunpack/language/',
+                            '/gunpack/first_gun/',
+                            '/gunpack/gun_positioning/',
+                            '/gunpack/hud_icon/',
+                            '/gunpack/gun_sound/',
+                            '/gunpack/gun_extra_damage/',
+                            '/gunpack/ammo/',
+                            '/gunpack/shell_ejection/',
+                            '/gunpack/muzzle_flash/',
+                            '/gunpack/hand_pos/',
+                            '/gunpack/animation/',
+                            '/gunpack/ica/',
+                            '/gunpack/bolt_type/',
+                            '/gunpack/attachment/',
+                            '/gunpack/gun_refit/',
+                            '/gunpack/lod/',
+                            '/gunpack/recipe/',
+                            '/gunpack/tag/'
+                        ]
+                    },
+                    {
+                        title: 'Model Building Guide',
+                        path: '/model_guide/',
+                        children: [
+                            '/model_guide/setting/',
+                            '/model_guide/model/',
+                            '/model_guide/texture/'
+                        ]
+                    }
                 ]
             },
             '/zh/': {
