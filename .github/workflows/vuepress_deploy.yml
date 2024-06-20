@@ -11,11 +11,18 @@ jobs:
       uses: actions/checkout@master
 
     - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: IT4Change/vuepress-build-and-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.PERSONAL_SECRET }}
         TARGET_REPO: MCModderAnchor/tacwiki
         TARGET_BRANCH: gh_pages
-        BUILD_SCRIPT: yarn && yarn run vuepress build docs
+        BUILD_SCRIPT: |
+          npm install -g pnpm
+          pnpm remove vuepress
+          pnpm add -D vuepress@next @vuepress/bundler-vite@next vue
+          pnpm add -D vuepress-plugin-search-pro
+          pnpm add -D katex
+          pnpm add vuepress-theme-hope
+          pnpm build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: tacwiki.mcma.club

@@ -1,19 +1,30 @@
-module.exports = {
-    locales: {
-        '/': {
-            lang: 'en-US',
-            title: 'Timeless and Classics guns Wiki',
-            description: 'A wiki related to Minecraft mod: Timeless and Classics guns'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defineUserConfig } from 'vuepress'
+import { hopeTheme } from "vuepress-theme-hope";
+
+export default defineUserConfig({
+    bundler: viteBundler(),
+    theme: hopeTheme({
+        plugins: {
+            searchPro: {
+                indexContent: false,
+                autoSuggestions: false,
+                queryHistoryCount: 0,
+                resultHistoryCount: 0
+            },
+            mdEnhance: {
+                katex: true
+            }
         },
-        '/zh/': {
-            lang: 'zh-CN',
-            title: '永恒枪械工坊',
-            description: '永恒枪械工坊帮助文档'
-        }
-    },
-    themeConfig: {
+        repo: "https://github.com/MCModderAnchor/tacwiki",
+        repoLabel: "GitHub",
+        repoDisplay: true,
+        docsDir: "docs",
+        lastUpdated: true,
+        contributors: true,
         locales: {
             '/': {
+                selectLanguageName: 'English',
                 sidebar: [
                     '/',
                     {
@@ -53,11 +64,17 @@ module.exports = {
                 ]
             },
             '/zh/': {
+                selectLanguageName: '简体中文',
+                navbarLayout: {
+                    start: ["Brand"],
+                    center: ["Links"],
+                    end: ["Language", "Repo", "Outlook", "Search"],
+                },
                 sidebar: [
-                    '/zh/',
                     {
-                        title: '枪包说明文档',
-                        path: '/zh/gunpack/',
+                        text: '枪包说明文档',
+                        link: '/zh/gunpack/',
+                        collapsible: true,
                         children: [
                             '/zh/gunpack/first_gunpack/',
                             '/zh/gunpack/language/',
@@ -69,6 +86,7 @@ module.exports = {
                             '/zh/gunpack/ammo/',
                             '/zh/gunpack/shell_ejection/',
                             '/zh/gunpack/muzzle_flash/',
+                            '/zh/gunpack/render_text/',
                             '/zh/gunpack/hand_pos/',
                             '/zh/gunpack/animation/',
                             '/zh/gunpack/ica/',
@@ -76,13 +94,13 @@ module.exports = {
                             '/zh/gunpack/attachment/',
                             '/zh/gunpack/gun_refit/',
                             '/zh/gunpack/lod/',
-                            '/zh/gunpack/recipe/',
-                            '/zh/gunpack/tag/'
+                            '/zh/gunpack/recipe/'
                         ]
                     },
                     {
-                        title: '模型建造指南',
-                        path: '/zh/model_guide/',
+                        text: '模型建造指南',
+                        link: '/zh/model_guide/',
+                        collapsible: true,
                         children: [
                             '/zh/model_guide/setting/',
                             '/zh/model_guide/model/',
@@ -91,6 +109,18 @@ module.exports = {
                     }
                 ]
             }
+        }
+    }),
+    locales: {
+        '/': {
+          lang: 'en-US',
+          title: 'Timeless and Classics guns Wiki'
         },
-    }
-}
+        '/zh/': {
+            lang: 'zh-CN',
+            title: '永恒枪械工坊'
+        }
+    },
+    plugins: [
+    ]
+})

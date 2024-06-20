@@ -16,6 +16,7 @@
 - [创建弹药](/zh/gunpack/ammo/)
 - [抛壳](/zh/gunpack/shell_ejection/)
 - [枪口火焰](/zh/gunpack/muzzle_flash/)
+- [枪械模型文字渲染](/zh/gunpack/render_text/)
 - [手臂定位组](/zh/gunpack/hand_pos/)
 - [枪械动画](/zh/gunpack/animation/)
 - [动画约束](/zh/gunpack/ica/)
@@ -24,9 +25,8 @@
 - [枪械改装支持](/zh/gunpack/gun_refit/)
 - [低精度模型](/zh/gunpack/lod/)
 - [配方](/zh/gunpack/recipe/)
-- [自定义创造物品栏标签页](/zh/gunpack/tag/)
 ### 枪械包参考文件结构
-[tac 默认枪包](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun) 采用了这个文件结构。
+[tac 默认枪包](https://github.com/MCModderAnchor/TACZ/tree/1.20.1/src/main/resources/assets/tacz/custom/tacz_default_gun/tacz) 采用了这个文件结构。
 ```
 根目录
 └─── tac   # 枪械包的命名空间，命名空间由此文件夹决定
@@ -40,8 +40,8 @@
      │         └─── 9mm.json
      │
      ├─── animations   # 动画文件夹
-     │    ├─── ak47.gltf  # gltf 动画文件
-     │    └─── m16.gltf
+     │    ├─── ak47.animation.json  # Bedrock 动画文件
+     │    └─── m16.gltf             # gltf 文件
      │
      ├─── attachments
      │    ├─── data   # 配件参数
