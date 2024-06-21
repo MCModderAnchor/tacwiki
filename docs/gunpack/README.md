@@ -25,7 +25,6 @@
 - [Firearm Modification](/gunpack/gun_refit/)
 - [Low Poly Model](/gunpack/lod/)
 - [Gun Recipe](/gunpack/recipe/)
-- [Creative Tabbing](/gunpack/tag/)
 ### Gunpack file structure
 [tac default gun package structure](https://github.com/MCModderAnchor/TimelessAndClassicsZero/tree/1.18.2/src/main/resources/assets/tac/custom/tac_default_gun) Gunpack file structure。
 ```

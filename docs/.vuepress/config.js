@@ -55,8 +55,7 @@ export default defineUserConfig({
                             '/gunpack/attachment/',
                             '/gunpack/gun_refit/',
                             '/gunpack/lod/',
-                            '/gunpack/recipe/',
-                            '/gunpack/tag/'
+                            '/gunpack/recipe/'
                         ]
                     },
                     {
