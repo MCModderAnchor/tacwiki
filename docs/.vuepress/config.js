@@ -31,7 +31,6 @@ export default defineUserConfig({
                     end: ["Language", "Repo", "Outlook", "Search"],
                 },
                 sidebar: [
-                    '/',
                     {
                         text: 'Gunpack Building Guide',
                         link: '/gunpack/',
