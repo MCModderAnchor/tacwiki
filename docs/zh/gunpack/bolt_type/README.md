@@ -4,7 +4,8 @@
 
 在枪械 data 文件内添加以下代码
 ``` json
-"bolt": "{枪机类型，open_bolt closed_bolt 或 manual_action}"
+// 枪机类型，open_bolt closed_bolt 或 manual_action
+"bolt": "close_bolt"
 ```
 
 ## 开膛待击 open_bolt
