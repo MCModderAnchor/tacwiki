@@ -23,7 +23,7 @@ The gun range is automatically calculated by the mod itself, the calculation for
 $$
 range = \frac{speed}{20}·\frac{1-(1-f)^{life*20}}{f}
 $$
-其中参数 speed、life 和 f (friction) 来自第一章中 [枪械数据文件的定义](/zh/gunpack/first_gun/#创建枪械数据文件)。
+The parameters speed, life and f (friction) are from [Chapter 1](/gunpack/first_gun/#creating-a-gun-data-file)。
 ```json
 {
     ...

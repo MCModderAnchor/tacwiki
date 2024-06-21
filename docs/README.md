@@ -4,5 +4,5 @@
 
  - [Gunpack Building Guide](./gunpack)
  - [Model Building Guide](./model_guide)
- 
- Made for Mod Version: v1.0.0
+
+ Made for Mod Version: v1.0.1

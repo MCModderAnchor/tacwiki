@@ -115,6 +115,13 @@ Create the file attachments/display/silencer_display.json
   "sight": true,
   // The FOV rendered by the gun and scope when aiming. By default, the FOV for rendering hand models in MC is 70
   "fov": 70.0
+  // sound effects, which can only be heard when installing and removing accessories
+  "sounds": {
+    // Sound effect when installing.
+    "install": "tacz:attachments/scope_general_e",
+    // Sound effect when removing.
+    "uninstall": "tacz:attachments/scope_general_e"
+  }
 }
 
 ```

@@ -9,11 +9,6 @@ Applicable scenarios for low-poly models: third-person holding, item frames, and
 
 ![High-Poly Model](./lod_m4a1.png)
 ![Low-Poly Model](./lod_m4a1_lod.png)
-::: tip
-
-The number of blocks in a low-poly model should not be too many; keeping it under 50 is ideal. Low-poly gun model should also retain their positioning groups. [Adjust gun model positioning groups](/zh/gunpack/gun_positioning/)
-
-:::
 When you have completed the modeling of the low-poly model, export the Bedrock edition model and related textures. Here we use the M4A1 as an example.
 ::: tip
 When creating your own low-poly model, avoid confusing the names with high-poly models. It is recommended to add the suffix "_lod" to both the model and texture of the low-poly model.
