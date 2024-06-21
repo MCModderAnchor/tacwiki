@@ -69,7 +69,7 @@ tutorial_gun_pack
 
 ![高精度模型](./lod_scope.png)![低精度模型](./lod_scope_lod.png)
 
-当你完成了低精度模型的建模时，导出基岩版模型和相关贴图，这里以 acog 为例。
+以 acog 为例。
 
 ### 给配件lod建模
 
