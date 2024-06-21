@@ -16,6 +16,7 @@
 - [Creating Ammunition](/gunpack/ammo/)
 - [Shell Ejection](/gunpack/shell_ejection/)
 - [Muzzle Flash](/gunpack/muzzle_flash/)
+- [Render Text on Gun Model](/gunpack/render_text/)
 - [Hand Positioning](/gunpack/hand_pos/)
 - [Gun Animation](/gunpack/animation/)
 - [Animation Constraints](/gunpack/ica/)
@@ -40,8 +41,8 @@ Root Directory
      │         └─── 9mm.json
      │
      ├─── animations   # Animations folder for guns
-     │    ├─── ak47.gltf  # Animation currently supported (gltf / bedrock)
-     │    └─── m16.gltf
+     │    ├─── ak47.animation.json  # Bedrock animation file (note that it has the suffix '.animation.json')
+     │    └─── m16.gltf             # gltf file
      │
      ├─── attachments
      │    ├─── data   # Accessory parameters

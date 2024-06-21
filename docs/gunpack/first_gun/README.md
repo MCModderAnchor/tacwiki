@@ -180,8 +180,7 @@ Create the file 'guns/index/ak47.json'
     // The firearm data file corresponds to the guns/data/ak47_data.json, of which the prefix "guns/data/" and suffix ".json" does not need to be included.
     "data": "tutorial:ak47_data",
     // Types of firearms are used to create label bar.
-    // All available categories: Pistol (pistol) SNIPER (sniper) Rifle (rifle) Shotgun (shotgun) SMG (submachine gun)
-    //             MG (machine gun) RPG (rocket launcher)
+    // All available categories: Pistol (pistol) SNIPER (sniper) Rifle (rifle) Shotgun (shotgun) SMG (submachine gun) MG (machine gun) RPG (rocket launcher)
     "type": "rifle",
     // Types of firearms, determine the logic of firearms, such as fire, loading, etc., the default is Modern_kinetic
     "item_type": "modern_kinetic",

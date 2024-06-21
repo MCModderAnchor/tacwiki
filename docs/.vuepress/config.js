@@ -25,11 +25,17 @@ export default defineUserConfig({
         locales: {
             '/': {
                 selectLanguageName: 'English',
+                navbarLayout: {
+                    start: ["Brand"],
+                    center: ["Links"],
+                    end: ["Language", "Repo", "Outlook", "Search"],
+                },
                 sidebar: [
                     '/',
                     {
-                        title: 'Gunpack Building Guide',
-                        path: '/gunpack/',
+                        text: 'Gunpack Building Guide',
+                        link: '/gunpack/',
+                        collapsible: true,
                         children: [
                             '/gunpack/first_gunpack/',
                             '/gunpack/language/',
@@ -41,6 +47,7 @@ export default defineUserConfig({
                             '/gunpack/ammo/',
                             '/gunpack/shell_ejection/',
                             '/gunpack/muzzle_flash/',
+                            '/gunpack/render_text/',
                             '/gunpack/hand_pos/',
                             '/gunpack/animation/',
                             '/gunpack/ica/',
@@ -53,8 +60,9 @@ export default defineUserConfig({
                         ]
                     },
                     {
-                        title: 'Model Building Guide',
-                        path: '/model_guide/',
+                        text: 'Model Building Guide',
+                        link: '/model_guide/',
+                        collapsible: true,
                         children: [
                             '/model_guide/setting/',
                             '/model_guide/model/',

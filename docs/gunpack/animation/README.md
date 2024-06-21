@@ -245,23 +245,23 @@ Baking animation should only be done before exporting the animation. If you want
 ------------
 
 ## Exporting Animation
-> The animations support glTF and JSON animation formats.
+> The animations support glTF and Bedrock animation formats.
 
-### Exporting glTF Animation Format
+### Exporting glTF Animation Format (with suffix '.gltf')
 ![gltf](https://s1.3hov.com/lesraisins/i/2024/06/02/export_gltf.png)
 
-### Exporting JSON Animation Format
+### Exporting Bedrock Animation Format (with suffix '.animation.json')
 ![json](https://s1.3hov.com/lesraisins/i/2024/06/02/export_json.png)
 
 ------------
 
 ## Filling in the Gun Display File
 > The animation will only load correctly in the game after filling in the gun display file.
-> Add the following to `gunname_display.json`:
+> Add the following:
 
 ```json
-  // Name of the animation to be called, will look for it in the animations folder in the pack directory. It is not recommended to leave it empty.
+  // Name of the animation to be called, which does not contain suffix, will look for it in the 'animations' folder in the pack directory. 
   "animation": "tacz:ak47",
   // Specify the use of default animations, can be empty. If any animation is missing in the file specified above, such as the draw animation, it will be copied from the default animations.
-  // The value can be rifle or pistol.
+  // The value can be 'rifle' or 'pistol'.
   "use_default_animation": "rifle",
