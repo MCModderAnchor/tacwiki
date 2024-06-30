@@ -79,9 +79,10 @@ export default defineUserConfig({
                 sidebar: [
                     {
                         text: '枪包说明文档',
-                        link: '/zh/gunpack/',
+                        link: '/zh/gunpack/before_start/',
                         collapsible: true,
                         children: [
+                            '/zh/gunpack/before_start/',
                             '/zh/gunpack/first_gunpack/',
                             '/zh/gunpack/language/',
                             '/zh/gunpack/first_gun/',

@@ -1,35 +1,37 @@
-# 枪械包构建
+# 在开始之前...
+## 一些注意事项
+
+### 关于文件格式
+枪械包支持 `.zip` 格式的压缩包和 **文件夹** 两种形式。`.zip` 格式方便分发，**文件夹** 形式方便枪械制作者制作时进行调试，其文件结构完全相同。
+
+### 关于命名空间/资源文件
+资源文件指枪包中一切贴图、模型、声音等资产文件  
+如果你熟悉 Minecraft 的资源包制作，你会发现枪包的文件结构与原版的资源包/数据包的有很多相似之处，但也有一些不同之处：
+
+- 大部分情况下，枪包 **无法引用Minecraft原版/模组/资源包等以传统资源包形式加载的资源**。因此你应当将所有需要的东西放入枪包中
+- 枪包之间的资源文件的引用仍可正常通过 **命名空间ID**（即`<命名空间>:<路径>`）的形式进行
+- 此外，目前枪包的模型资源 **仅支持基岩版模型格式**
+
+::: warning
+与原版一致，枪包的命名空间ID **不支持** 使用 **中文文件名**    
+更准确的说，你应该确保枪包内所有的文件和文件夹名 **仅包含小写英文字符、数字、下划线**  
+:::
+
+关于 **命名空间ID** 的详细说明，请参考: [Minecraft Wiki: 命名空间ID](https://zh.minecraft.wiki/w/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4ID)
+
+### 关于JSON文件
+枪包的大部分配置文件都是以 JSON 格式存储的。  
+介于JSON文件有较为严格的语法要求，如果你不熟悉JSON文件的书写规范，建议你先简单学习一下JSON的基本语法。
+
 ::: tip
-- 枪械包支持 zip 压缩格式和文件夹两种形式。zip 格式方便分发，文件夹形式方便枪械制作者制作使用。其文件结构相同。
-- 需要注意的是，大部分情况下，枪包无法引用 MC 原版资源和模组资源。因此你应当将所有需要的东西放入枪包中。
-- 枪包支持的模型格式目前仅为基岩版模型。
-- 枪包之间引用资源文件，可以通过 '命名空间:资源路径' 的方式进行。
-::: 
-### 枪包详细构建教程
-- [创建第一个枪包](/zh/gunpack/first_gunpack/)
-- [创建并使用语言文件](/zh/gunpack/language/)
-- [创建第一把枪](/zh/gunpack/first_gun/)
-- [调整枪械模型定位组](/zh/gunpack/gun_positioning/)
-- [创建 HUD Icon](/zh/gunpack/hud_icon/)
-- [添加枪械音效](/zh/gunpack/gun_sound/)
-- [额外伤害](/zh/gunpack/gun_extra_damage/)
-- [创建弹药](/zh/gunpack/ammo/)
-- [抛壳](/zh/gunpack/shell_ejection/)
-- [枪口火焰](/zh/gunpack/muzzle_flash/)
-- [枪械模型文字渲染](/zh/gunpack/render_text/)
-- [手臂定位组](/zh/gunpack/hand_pos/)
-- [枪械动画](/zh/gunpack/animation/)
-- [动画约束](/zh/gunpack/ica/)
-- [枪机类型](/zh/gunpack/bolt_type/)
-- [创建配件](/zh/gunpack/attachment/)
-- [枪械改装支持](/zh/gunpack/gun_refit/)
-- [低精度模型](/zh/gunpack/lod/)
-- [配方](/zh/gunpack/recipe/)
-### 枪械包参考文件结构
-[tac 默认枪包](https://github.com/MCModderAnchor/TACZ/tree/1.20.1/src/main/resources/assets/tacz/custom/tacz_default_gun/tacz) 采用了这个文件结构。
+我们强烈推荐使用 **VSCode** 或其他等支持 JSON 语法高亮的编辑器来编辑 JSON 文件，以避免因为书写错误导致的问题。
+:::
+
+## 枪械包参考文件结构
+以下展示了 [tacz 默认枪包](https://github.com/MCModderAnchor/TACZ/tree/1.20.1/src/main/resources/assets/tacz/custom/tacz_default_gun/tacz) 的文件结构，你可以以此作为参考构建你的枪包  
 ```
 根目录
-└─── tac   # 枪械包的命名空间，命名空间由此文件夹决定
+└─── tac   # 枪械包的命名空间，命名空间由此文件夹的名称决定
      ├─── ammo
      │    ├─── display   # 弹药的客户端数据
      │    │    ├─── 762x39_display.json
@@ -157,7 +159,6 @@
      │         ├─── 9mm_shell.png
      │         └─── 762x39_shell.png
      │
-     ├─── pack.json   # 枪包描述文件
-     │
-     └─── tab.json   # 自定义创造栏标签页文件
+     └─── pack.json   # 枪包描述文件
+
 ```
