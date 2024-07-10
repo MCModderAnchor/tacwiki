@@ -78,6 +78,17 @@ export default defineUserConfig({
                 },
                 sidebar: [
                     {
+                        text: '模组使用文档',
+                        link: '/zh/user_guide/welcome/',
+                        collapsible: true,
+                        children: [
+                            '/zh/user_guide/welcome/',
+                            '/zh/user_guide/install_gunpack/',
+                            '/zh/user_guide/attachment_lock/',
+                            '/zh/user_guide/dummy_ammo/'
+                        ]
+                    },
+                    {
                         text: '枪包说明文档',
                         link: '/zh/gunpack/before_start/',
                         collapsible: true,
