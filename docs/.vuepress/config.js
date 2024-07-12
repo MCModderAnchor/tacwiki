@@ -84,6 +84,7 @@ export default defineUserConfig({
                         children: [
                             '/zh/user_guide/welcome/',
                             '/zh/user_guide/install_gunpack/',
+                            '/zh/user_guide/hide_tooltip/',
                             '/zh/user_guide/attachment_lock/',
                             '/zh/user_guide/dummy_ammo/'
                         ]
