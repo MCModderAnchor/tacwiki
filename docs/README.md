@@ -1,6 +1,6 @@
 # Timeless and Classics Mod Guide
 
-![Icon](./icon.png)
+![Icon](/icon.png)
 
  - [Gunpack Building Guide](./gunpack)
  - [Model Building Guide](./model_guide)

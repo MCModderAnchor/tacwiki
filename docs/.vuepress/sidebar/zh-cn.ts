@@ -3,20 +3,21 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar([
     {
         text: "模组使用文档",
-        link: "/zh-cn/user_guide/welcome",
-        prefix: "/zh-cn/user_guide/",
+        link: "/zh/user_guide/welcome",
+        prefix: "/zh/user_guide/",
+        collapsible: true,
         children: "structure"
     },
     {
-        text: "枪包说明文档",
-        link: "/zh-cn/gunpack/before_start/",
-        prefix: "/zh-cn/gunpack/",
+        text: "枪包制作指南",
+        link: "/zh/gunpack/01_before_start",
+        prefix: "/zh/gunpack/",
         children: "structure",
     },
     {
         text: "模型建造指南",
-        link: "/zh-cn/model_guide/",
-        prefix: "/zh-cn/model_guide/",
+        link: "/zh/model_guide/",
+        prefix: "/zh/model_guide/",
         children: "structure",
     },
 ]);

@@ -25,7 +25,7 @@ export default hopeTheme({
         "/": {
             sidebar: enusNavbar,
         },
-        "/zh-cn/": {
+        "/zh/": {
             sidebar: zhcnNavbar,
         },
     },

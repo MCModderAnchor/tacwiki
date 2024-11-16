@@ -2,7 +2,6 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 
 import theme from "./theme.js"
-
 export default defineUserConfig({
     bundler: viteBundler(),
     theme,
@@ -11,7 +10,7 @@ export default defineUserConfig({
             lang: "en-US",
             title: "Timeless and Classics guns Wiki",
         },
-        "/zh-cn/": {
+        "/zh/": {
             lang: "zh-CN",
             title: "永恒枪械工坊",
         },
