@@ -1,17 +1,14 @@
 ---
-order: 1
+order: 2
 ---
 # 创建第一把枪
 我们将以 ak47 为示范，展示如何创建一把最简单的枪，并将其加入你的枪包。
 
 ## 准备工作
-我们假设你已经按照 [章节：创建第一个枪包](../02_first_pack )创建了你的枪包文件夹并准备好了如下材料：
+我们假设你已经按照 [章节：创建第一个枪包](../02_first_pack )创建了你的枪包文件夹并根据[上一节](./01_simple_gun)的内容准备好了如下材料：
 - 枪械的模型文件: `ak47_geo.json`
 - 模型贴图: `ak47.png`
-- 背包 2D 贴图: `ak47.png`    
-::: tip
-如果你懒得自己动手，可以到 [这里](https://github.com/MCModderAnchor/tacwiki/tree/main/resource/first_gun) 下载已经创建好的资源。   
-:::
+- 背包 2D 贴图: `ak47.png`
 
 ## 放置资产
 1. 模型文件应放入枪包的 `assets/<命名空间>/geo_models/` 目录下。我们可以创建一个子目录 `geo_models/gun/` 对枪械模型进行分类，并将枪械模型放在此。
@@ -141,7 +138,7 @@ order: 1
 ### 创建枪械效果文件
 枪械效果文件应置于 guns/display/ 目录下。此文件用于定义枪械的展示效果，如模型、贴图、动画等。接下来我们为 ak47 创建一个最基本的效果文件。   
 创建文件 guns/display/ak47_display.json
-``` json
+```json
 {
     // 使用我们放入的模型文件：models/gun/ak47_geo.json。注意，不需要包含文件后缀，也不要包含开头的 "models/"。
     "model": "tutorial:gun/ak47_geo",
@@ -156,7 +153,7 @@ order: 1
 ### 创建枪械定义文件
 枪械定义文件应置于 guns/index/ 目录下。此文件用于定义枪械物品，并索引到数据文件和效果文件。需要注意的是，此文件的名称即为你的枪械物品的id，是枪械物品的唯一标识符。接下来我们为 ak47 创建一个最基本的定义文件。   
 创建文件 guns/index/ak47.json
-``` json
+```json
 {
     // 枪械的显示名称，支持使用语言文件定义。
     "name": "tutorial.gun.ak47.name",
@@ -175,7 +172,7 @@ order: 1
     "sort": 10
 }
 ```
-在语言文件中定义枪械的显示名称。向 lang/en_us.json 中添加:
+在语言文件中定义枪械的显示名称。向 `lang/en_us.json` 中添加:
 ``` json
     "tutorial.gun.ak47.name": "AK47 Assult Rifle"
 ```
@@ -207,4 +204,4 @@ tutorial_gun_pack
 将创建好的枪包文件夹拷贝到 Minecraft 客户端的版本根目录下的 config/tac/custom/ 文件夹中，然后启动游戏。   
 如果你看到如下画面，证明枪械添加成功了。   
 ![In Game Screenshot](/gunpack/gun/in_game.png)    
-你可能会注意到，各个人称下枪械的位置不太正确。这是因为枪械模型中尚未安置各个人称下的模型定位组。下一章教程中我们将会解析如何使用 [枪械模型定位组](/zh/gunpack/gun_positioning/)。
+你可能会注意到，各个人称下枪械的位置不太正确。这是因为枪械模型中尚未安置各个人称下的模型定位组。下一章教程中我们将会解析如何使用 [枪械模型定位组](./05_gun_position)。
