@@ -35,7 +35,7 @@ order: 2
   "namespace": "tutorial",
   // 可选，声明依赖的模组的版本范围，如果任一项不满足，则枪包不会加载
   "dependencies": {
-    "tacz": "[1.0.4,)"
+    "tacz": "[1.1.4,)"
   }
 }
 ```
