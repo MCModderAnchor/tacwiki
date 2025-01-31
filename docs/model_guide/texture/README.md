@@ -1,53 +1,53 @@
-# Part Three · Texturing and Coloring
-## Optimizing the Model
-### Face Culling
-The first step is to optimize the model's face count. We will use the Optimize plugin, which automatically calculates overlapping and invisible faces and removes them. However, ensure you back up your model before face culling and try to operate only on separate parts.
+#第三部分·纹理与着色
+##优化模型
+###面裁选
+第一步是优化模型的面数。我们将使用Optimize插件，它自动计算重叠面和不可见面并将其删除。但是，请确保在面裁选之前备份模型，并尝试仅对单独的零件进行操作。
 
-You can install the plugin directly in Blockbench by going to Plugin – Available and searching for Optimize.
+您可以直接在Blockbench中安装插件，方法是转到Plugin-available并搜索Optimize。
 
-![Optimize Plugin](./3.1.1.png)
+![优化插件](./3.1.1.png)
 
-Note that the Optimize plugin might encounter errors, such as deleting exposed faces in the Bedrock Edition or Free Model formats. If this happens, quickly undo the operation with Ctrl+Z and check the model. If a part cannot be optimized correctly by the plugin, it is better to manually cull faces or skip culling altogether.
+请注意，Optimize插件可能会遇到错误，例如删除Bedrock Edition或自由模型格式中的暴露面。如果出现这种情况，请使用Ctrl+Z快速撤消操作并检查模型。如果插件无法正确优化零件，则最好手动清除面或完全跳过清除。
 
-You can find Optimize in the Tools interface. The operation interface looks like this:
+您可以在“工具”界面中找到“优化”。操作界面如下：
 
-![Plugin Interface](./3.1.2.1.png)
+![插件接口](./3.1.2.1.png)
 
-![Plugin Interface](./3.1.2.2.png)
+![插件接口](./3.1.2.2.png)
 
-The two checkboxes are **Selected Elements Only** and **Apply Face Culling**.
+这两个复选框是**仅选定的图元**和**应用面消隐**.
 
-Ensure you check Selected Elements Only, or the plugin will indiscriminately optimize all elements of the model.
+确保选中“仅选定元素”，否则插件将不加区别地优化模型的所有元素。
 
-When Apply Face Culling is checked, optimization directly removes the UV information of the faces.
+选中“应用面消隐”后，优化会直接删除面的UV信息。
 
-Example operation: Optimizing face culling for the handguard
-**Be sure to back up your model!
-Be sure to back up your model!
-Be sure to back up your model!**
+示例操作：优化护手板的面裁选
+**请务必备份您的模型！
+请务必备份您的模型！
+请务必备份您的模型！**
 
-Select the skeleton in the outline view and press I to show only that skeleton in the preview.
-Select the skeleton, open Tools – Optimize, and check both options.
-Apply and check for incorrectly deleted faces. **If there are any, undo the operation or restore from backup.**
-If successful, you will see that some faces have been removed.
-Proper use of this plugin will reduce face count by 20%-40%, improving game performance.
+在轮廓视图中选择骨架，然后按I键在预览中仅显示该骨架。
+选择骨架，打开“工具”(Tools)-“优化”(Optimize)，然后选中这两个选项。
+应用并检查错误删除的面。**如果有，请撤消操作或从备份还原。**
+如果成功，您将看到某些面已被删除。
+正确使用此插件将减少20%-40%的脸数，提高游戏性能。
 
-![Plugin Auto-Optimize Model](./3.1.3.1.png)
+![插件自动优化模型](./3.1.3.1.png)
 
-![Plugin Auto-Optimize Model](./3.1.3.2.png)
+![插件自动优化模型](./3.1.3.2.png)
 
-![Plugin Auto-Optimize Model](./3.1.3.3.png)
+![插件自动优化模型](./3.1.3.3.png)
 
-Repeat these steps to optimize other structures.
-You can also manually cull faces in the left UV editing bar. This is suitable for precise culling or supplementing areas the plugin cannot recognize. This button removes the selected UV face.
+重复这些步骤以优化其他结构。
+您也可以在左侧UV编辑栏中手动剔除面，这适合于插件无法识别的区域的精确剔除或补充。此按钮将删除选定的UV面。
 
-![Manual Face Culling](./3.1.4.1.png)
+![手动面剔除](./3.1.4.1.png)
 
-![Manual Face Culling](./3.1.4.2.png)
+![手动面剔除](./3.1.4.2.png)
 
-If a face is deleted incorrectly and the project has progressed too far to restore from a backup, how can you recover it?
+如果面部被错误删除，并且项目进展太快，无法从备份中恢复，您如何恢复它？
 
-![UV Tool "Apply to All Faces"](./3.1.5.png)
+![UV工具“应用于所有面”](./3.1.5.png)
 
 Click on the remaining face of the block, go to the UV bar and select the paint bucket icon "Apply to All Faces," which restores the deleted UV face.
 
