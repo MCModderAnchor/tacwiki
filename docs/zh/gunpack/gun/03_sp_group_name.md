@@ -97,7 +97,9 @@ order: 3
 枪托适配器组，用于控制是否渲染枪托适配器。
 当枪械装配枪托配件时，程序会渲染 `attachment_adapter` 组的内容。  
 ::: tip
-某些枪械可能需要该功能来适配枪托配件，例如AK系枪械适配AR系枪托配件
+某些枪械可能需要该功能来适配枪托配件，例如AK系枪械适配AR系枪托配件  
+![adapter_1](/gunpack/gun/attachment_adapter/adapter_1.png)
+![adapter_2](/gunpack/gun/attachment_adapter/adapter_2.png)
 :::
 
 ### **muzzle_flash**
