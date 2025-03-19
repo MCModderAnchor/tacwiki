@@ -81,7 +81,6 @@ order: 3
 ::: tip
 可以依靠这两个组的特性，制作折叠基础瞄具的效果。
 ![sight](/gunpack/gun/sight/sight.png)
-![sight_folded](/gunpack/gun/sight/sight_folded.png)
 :::
 
 ### **muzzle_default**
@@ -103,7 +102,7 @@ order: 3
 :::
 
 ### **muzzle_flash**
-枪口火焰组，用于定位渲染枪口火焰贴图渲染的位置，以及第一人称下发射曳光弹的位置。
+枪口火焰组，用于定位渲染枪口火焰贴图渲染的位置，以及第一人称视角下发射曳光弹的位置。
 
 ### **配件定位组**
 用来确定配件安装时，配件渲染的位置。  
