@@ -22,12 +22,14 @@ order: 2
     ├─assets
     │  └─tutorial
     │     ├─geo_models
-    │     │  └─ak47_geo.json
+    │     │  └─gun
+    │     │     └─ak47_geo.json
     │     └─textures
-    │        ├─slot
-    │        │  └─ak47.png
-    │        └─uv
-    │           └─ak47.png
+    │        └─gun
+    │           ├─slot
+    │           │  └─ak47.png
+    │           └─uv
+    │              └─ak47.png
     ├─data
     │  └─tutorial
     └─gunpack.meta.json
@@ -179,27 +181,31 @@ order: 2
 ### 检验你的成果
 经过上述步骤，此时你的枪包目录结构应该是这样:
 ```
-tutorial_gun_pack
-└─ tutorial
-   ├─ pack.json
-   ├─ textures
-   │  └─ gun
-   │     ├─ uv
-   │     │  └─ ak47.png
-   │     └─ slot
-   │        └─ ak47.png
-   ├─ models
-   │  └─ gun
-   │     └─ ak47_geo.json
-   ├─ lang
-   │  └─ en_us.json
-   └─ guns
-      ├─ index
-      │  └─ ak47.json
-      ├─ display
-      │  └─ ak47_display.json
-      └─ data
-         └─ ak47_data.json
+└─ tutorial_gun_pack
+   ├─ assets
+   │   └─ tutorial
+   │       ├─ display
+   │       │   └─ guns
+   │       │       └─ ak47_display.json
+   │       ├─ textures
+   │       │  └─ gun
+   │       │      ├─ uv
+   │       │      │   └─ ak47.png
+   │       │      └─ slot
+   │       │          └─ ak47.png
+   │       ├─ geo_models
+   │       │   └─ gun
+   │       │       └─ ak47_geo.json
+   │       └─ lang
+   │           └─ en_us.json
+   └─ data
+      └─ tutorial
+          ├─ data
+          │   └─ guns
+          │       └─ ak47_data.json
+          └─ index
+              └─ guns
+                  └─ ak47.json
 ```
 将创建好的枪包文件夹拷贝到 Minecraft 客户端的版本根目录下的 config/tac/custom/ 文件夹中，然后启动游戏。   
 如果你看到如下画面，证明枪械添加成功了。   
