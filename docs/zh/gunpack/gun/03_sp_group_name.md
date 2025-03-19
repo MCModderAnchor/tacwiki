@@ -70,6 +70,24 @@ order: 3
 此外，您 **绝对不应该** 把 `additional_magazine` 分组放在 `magazine` 分组下，否则会导致程序循环调用而使得游戏崩溃！
 :::
 
+### **bullet_in_mag**
+弹匣子弹组，用于控制是否渲染弹匣模型内的子弹，通常放在 `magazine` 组下。  
+当弹容为0时，程序会自动隐藏 `bullet_in_mag` 组的内容。
+
+### **sight、sight_folded**
+基础瞄具组，用于控制是否渲染枪械的基础瞄具。  
+当枪械未装配瞄具配件时，程序会隐藏 `sight_folded` 组的内容，并且渲染 `sight`组的内容。  
+反之，当枪械装配瞄具时，程序会隐藏 `sight`组的内容，并且渲染 `sight_folded` 组的内容。  
+::: tip
+可以依靠这两个组的特性，制作折叠基础瞄具的效果。  
+![sight](/gunpack/gun/sight/sight.png)  
+![sight_folded](/gunpack/gun/sight/sight_folded.png)  
+:::
+
+### **muzzle_default**
+基础枪口组，用于控制是否渲染基础枪口，通常放在枪口处。  
+当枪械装配枪口配件时，程序会隐藏 `muzzle_default` 组的内容。
+
 ### 发光组
 发光组并不是一个固定的组名，而是需要通过在模型中常规的组名后添加后缀`_illuminated`来定义。  
 发光组下的块会在渲染时以满亮度渲染，一般用于在枪械模型中添加荧光效果，例如机瞄的荧光效果。  
