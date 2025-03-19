@@ -18,21 +18,21 @@ order: 2
 
 如果你按照如上步骤操作，你现在的枪包目录应该类似这样：
 ```
-└─tutorial_gun_pack
-    ├─assets
-    │  └─tutorial
-    │     ├─geo_models
-    │     │  └─gun
-    │     │     └─ak47_geo.json
-    │     └─textures
-    │        └─gun
-    │           ├─slot
-    │           │  └─ak47.png
-    │           └─uv
-    │              └─ak47.png
-    ├─data
-    │  └─tutorial
-    └─gunpack.meta.json
+└─ tutorial_gun_pack
+    ├─ assets
+    │  └─ tutorial
+    │     ├─ geo_models
+    │     │  └─ gun
+    │     │     └─ ak47_geo.json
+    │     └─ textures
+    │        └─ gun
+    │           ├─ slot
+    │           │  └─ ak47.png
+    │           └─ uv
+    │              └─ ak47.png
+    ├─ data
+    │  └─ tutorial
+    └─ gunpack.meta.json
 ```
 
 ## 创建枪械数据文件
