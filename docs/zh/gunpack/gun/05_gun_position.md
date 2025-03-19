@@ -37,7 +37,8 @@ idle_view 则是玩家在非瞄准状态下眼球的位置和朝向。
 ![Idle View](/gunpack/gun/position/idle_view.png)   
 最后，导出模型文件，启动游戏，你应该可以看到类似下图的效果。   
 ![In Game](/gunpack/gun/position/in_game.gif)   
-此外，还有几个配件界面视角定位分组，用于控制在打开配件界面时，点击不同配件槽位，摄像机移动的位置。
+
+此外，还有几个配件界面视角定位分组，用于控制在打开配件界面时，点击不同配件槽位，摄像机移动的位置。    
 `refit_view` 配件界面初始视角  
 `refit_muzzle_view` 枪口配件视角  
 `refit_stock_view` 枪托配件视角  
