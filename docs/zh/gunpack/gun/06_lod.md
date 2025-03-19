@@ -9,8 +9,8 @@ LOD的最终目的并不是为了在第三人称展现足够的细节，而是�
 因此，我们所追求的lod效果可以适当地牺牲第一人称的结构和细节，以达成更少的块数。通常一个保证一定细节的lod建议控制在25-50个cube。
 :::
 
-![lod_1](/gunpack/gun/lod/lod_1.png)
-![lod_2](/gunpack/gun/lod/lod_2.png)
+![低模展示](/gunpack/gun/lod/lod_1.png)
+![帧数对比](/gunpack/gun/lod/lod_2.png)
 
 ## 准备事项
 
@@ -77,8 +77,7 @@ optmize插件在**基岩/自由**模型中剔除具有**不稳定性**，外加l
 ![lod_24](/gunpack/gun/lod/lod_24.png)  
 底部同理  
 
-绘制完毕查看整体效果  
-![lod_25](/gunpack/gun/lod/lod_25.png)  
+绘制完毕查看整体效果
 
 ## 定位组的处理与游戏内实装
 
