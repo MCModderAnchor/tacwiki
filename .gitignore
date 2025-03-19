@@ -6,3 +6,4 @@ yarn.lock
 .obsidian
 .idea
 /pnpm-lock.yaml
+/docs/.vuepress/dist/

@@ -7,8 +7,9 @@ Applicable scenarios for low-poly models: third-person holding, item frames, and
 
 ## Low-Poly Gun Models
 
-![High-Poly Model](./lod_m4a1.png)
-![Low-Poly Model](./lod_m4a1_lod.png)
+[//]: # (![High-Poly Model]&#40;./lod_m4a1.png&#41;)
+
+[//]: # (![Low-Poly Model]&#40;./lod_m4a1_lod.png&#41;)
 When you have completed the modeling of the low-poly model, export the Bedrock edition model and related textures. Here we use the M4A1 as an example.
 ::: tip
 When creating your own low-poly model, avoid confusing the names with high-poly models. It is recommended to add the suffix "_lod" to both the model and texture of the low-poly model.
@@ -20,7 +21,8 @@ A recommended method is to copy the high-poly model and then simplify it accordi
 
 ::: tip
 Low-poly models should also retain all positioning groups.
-[Adjusting Gun Model Positioning Groups](/gunpack/gun_positioning/)
+
+[//]: # ([Adjusting Gun Model Positioning Groups]&#40;/gunpack/gun_positioning/&#41;)
 Since it is not rendered in the first-person view, the first-person arm positioning group is not needed.
 :::
 
@@ -67,11 +69,12 @@ Find your gun display file (in the guns/display directory). Using m4a1 as an exa
 
 After doing this, start the game (or use /tacz reload in-game).
 If you see the following screen, it means the low-poly model has been successfully added.
-![完成](./lod_m4a1_finish.png)
+
+[//]: # (![完成]&#40;./lod_m4a1_finish.png&#41;)
 
 ## Low-Poly model of Accessories
 
-![High-precision model](./lod_scope.png)![Low-precision model](./lod_scope_lod.png)
+[//]: # (![High-precision model]&#40;./lod_scope.png&#41;![Low-precision model]&#40;./lod_scope_lod.png&#41;)
 Here we take acog as an example. (left: normal model; right: low-poly model)
 
 ### Modeling accessory LOD
@@ -122,9 +125,11 @@ Find your accessory display file (under the attachments/display directory). Here
 
 Start the game after doing this (or use /tacz reload in the game).
 If you see the following screen, it means that the low-precision model of the accessory has been added successfully.
-![Finished](./lod_scope_finish.png)
+
+[//]: # (![Finished]&#40;./lod_scope_finish.png&#41;)
 
 ## Global control of low-precision models
 
 Finally, if you happen to have the Cloth Config mod installed, you can press alt + T in the game to open the configuration menu. Here, you can set the rendering distance for the low-poly model (in blocks). Within this distance, the high-poly model is rendered; beyond this distance, the low-poly model is rendered.
-![配置](./lod_config.png)
+
+[//]: # (![配置]&#40;./lod_config.png&#41;)
