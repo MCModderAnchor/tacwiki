@@ -80,6 +80,8 @@ order: 3
 反之，当枪械装配瞄具时，程序会隐藏 `sight`组的内容，并且渲染 `sight_folded` 组的内容。  
 ::: tip
 可以依靠这两个组的特性，制作折叠基础瞄具的效果。
+![sight](/gunpack/gun/sight/sight.png)
+![sight_folded](/gunpack/gun/sight/sight_folded.png)
 :::
 
 ### **muzzle_default**
