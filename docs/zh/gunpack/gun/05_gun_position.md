@@ -37,6 +37,14 @@ idle_view 则是玩家在非瞄准状态下眼球的位置和朝向。
 ![Idle View](/gunpack/gun/position/idle_view.png)   
 最后，导出模型文件，启动游戏，你应该可以看到类似下图的效果。   
 ![In Game](/gunpack/gun/position/in_game.gif)   
+此外，还有几个配件界面视角定位分组，用于控制在打开配件界面时，点击不同配件槽位，摄像机移动的位置。
+`refit_view` 配件界面初始视角  
+`refit_muzzle_view` 枪口配件视角  
+`refit_stock_view` 枪托配件视角  
+`refit_scope_view` 瞄具配件视角  
+`refit_extended_mag_view` 弹匣配件视角  
+`refit_grip_view` 握把配件视角  
+`refit_laser_view` 激光指示器配件视角
 
 ## 调整第三人称模型定位组
 在 position 中新建三个分组，分别名为 ground 、thirdperson_hand 和 fixed (这三个分组的名称不能改变)。它们分别是 掉落物模型定位、生物实体手持模型定位 和 展示框模型定位。   
