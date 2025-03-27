@@ -70,9 +70,6 @@ order: 3
 此外，您 **绝对不应该** 把 `additional_magazine` 分组放在 `magazine` 分组下，否则会导致程序循环调用而使得游戏崩溃！
 :::
 
-### **bullet_in_mag**
-弹匣子弹组，用于控制是否渲染弹匣模型内的子弹，通常放在 `magazine` 组下。  
-当弹容为0时，程序会自动隐藏 `bullet_in_mag` 组的内容。
 
 ### **sight、sight_folded**
 基础瞄具组，用于控制是否渲染枪械的基础瞄具。  
