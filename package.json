@@ -13,11 +13,11 @@
   "license": "MIT",
   "author": "MaydayMemory | Tartaric_acid | xjqsh",
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/bundler-vite": "2.0.0-rc.21",
     "katex": "^0.16.10",
     "vue": "^3.4.31",
     "vue-template-compiler": "^2.7.16",
-    "vuepress": "2.0.0-rc.14",
+    "vuepress": "2.0.0-rc.21",
     "vuepress-plugin-search-pro": "2.0.0-rc.50"
   },
   "directories": {
