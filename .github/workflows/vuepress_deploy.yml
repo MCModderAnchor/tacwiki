@@ -17,12 +17,7 @@ jobs:
         TARGET_REPO: MCModderAnchor/tacwiki
         TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: |
-          npm install -g pnpm
-          pnpm remove vuepress
-          pnpm add -D vuepress@next @vuepress/bundler-vite@next vue
-          pnpm add -D vuepress-plugin-search-pro
-          pnpm add -D katex
-          pnpm add vuepress-theme-hope
+          pnpm install
           pnpm build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: tacwiki.mcma.club
