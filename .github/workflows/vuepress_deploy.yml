@@ -17,6 +17,7 @@ jobs:
         TARGET_REPO: MCModderAnchor/tacwiki
         TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: |
+          npm install -g pnpm
           pnpm install
           pnpm build
         BUILD_DIR: docs/.vuepress/dist/
