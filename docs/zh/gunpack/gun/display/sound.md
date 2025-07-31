@@ -9,8 +9,8 @@
 | put_away        | 收枪时播放                                    |
 | reload_empty    | 膛内没有子弹的情况下换弹时播放                          |
 | reload_tactical | 膛内有子弹的情况下换弹时播放                           |
-| shoot           | **本地客户端**开火时播放                           |
-| shoot_3p        | **其他生物**开火时播放                            |
+| shoot           | **本地客户端**开火时播放，**支持双声道**                 |
+| shoot_3p        | **其他生物**开火时播放，**只支持单声道**                 |
 | silence         | **本地客户端**安装消音器后开火时播放                     |
 | silence_3p      | **其他生物**安装消音器后开火时播放                      |
 | dry_fire        | 弹匣打空后扣动扳机时播放。tacz 提供了默认音效，你可以不指定以启用默认音效。 |
@@ -29,33 +29,37 @@
 因此，在 sounds/ 文件夹下，新建一个 ak47/ 文件夹，并将下载的 ak47_shoot.ogg 和 ak47_dry_fire.ogg 放入其中。    
 此时你的枪包文件结构应该看起来像这样：   
 ```
-tutorial_gun_pack
-└─ tutorial
-   ├─ pack.json
-   ├─ textures
-   │  └─ gun
-   │     ├─ uv
-   │     │  └─ ak47.png
-   │     ├─ slot
-   │     │  └─ ak47.png
-   │     └─ hud
-   │        └─ ak47.png
-   ├─ sounds
-   │  └─ ak47
-   │     ├─ ak47_dry_fire.ogg
-   │     └─ ak47_shoot.ogg
-   ├─ models
-   │  └─ gun
-   │     └─ ak47_geo.json
-   ├─ lang
-   │  └─ en_us.json
-   └─ guns
-      ├─ index
-      │  └─ ak47.json
-      ├─ display
-      │  └─ ak47_display.json
-      └─ data
-         └─ ak47_data.json
+└─tutorial_gun_pack
+   ├─ assets
+   │   └─ tutorial
+   │       ├─ gunpack_info.json
+   │       ├─ textures
+   │       │    └─ gun
+   │       │        ├─ uv
+   │       │        │   └─ ak47.png
+   │       │        ├─ slot
+   │       │        │   └─ ak47.png
+   │       │        └─ hud
+   │       │            └─ ak47.png
+   │       ├─ display
+   │       │   └─ silencer_display.json
+   │       ├─ tacz_sounds
+   │       │   └─ ak47
+   │       │       ├─ ak47_dry_fire.ogg
+   │       │       └─ ak47_shoot.ogg
+   │       ├─ geo_models
+   │       │   └─ gun
+   │       │       └─ ak47_geo.json
+   │       └─ lang
+   │           └─ en_us.json
+   └─ data
+       └─ tutorial
+           ├─ index
+           │   └─ guns
+           │       └─ ak47.json        
+           └─ data
+               └─ guns
+                   └─ ak47_data.json
 ```
 3. 在 ak47 的效果文件中指定这两个音效。   
 打开 guns/display/ak47_display.json 文件，添加如下代码: 
