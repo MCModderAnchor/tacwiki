@@ -5,7 +5,7 @@ order: 3
 配方过滤器用于筛选合成台包含的配方，以便于玩家在合成台中只看到某些特定配方。  
 
 :::tip
-过滤器检索的字段是配方的完整id字符串，比如`tutorial:gun/ak47`。
+过滤器检索的字段是配方的完整id字符串，比如`tutorial:gun/ak47`, 如果希望添加进白名单的是枪械，则一般是以gun作为前缀，比如`tutorial:gun/ak47`，如果是配件，则以attachments作为前缀，比如：`tutorial:attachments/ak47-scope`, 如果是子弹，则以ammo作为前缀，比如：`tutorial:ammo/762x39`
 :::
 
 ## 定义一个配方过滤器
