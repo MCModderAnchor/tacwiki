@@ -1,0 +1,1 @@
+const m="/gunpack/gun/ammo/my_ammo_slot.png",o="/gunpack/gun/ammo/ammo_model.png",n="/gunpack/gun/ammo/my_ammo_model.png",a="/gunpack/gun/ammo/ammo_entity_model.png",_="/gunpack/gun/ammo/ammo_shell_model.png",g="/gunpack/gun/ammo/in_game_1.png",s="/gunpack/gun/ammo/in_game_2.png";export{o as _,n as a,m as b,a as c,_ as d,g as e,s as f};
