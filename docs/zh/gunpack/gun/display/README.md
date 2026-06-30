@@ -5,56 +5,56 @@
 ### 模型与贴图
 | 字段                     | 类型   | 必填 | 说明                        | 详情                 |
 |------------------------|------|----|---------------------------|--------------------|
-| model                  | 字符串  | 是  | 枪械模型，在 `models/` 下寻找      | [基础显示](basic.md)   |
-| texture                | 字符串  | 是  | 枪械贴图，在 `textures/` 下寻找    | [基础显示](basic.md)   |
-| lod                    | 对象   | 否  | 低模配置（远距离渲染）               | [基础显示](basic.md)   |
-| animation              | 字符串  | 否  | 调用的动画文件                   | [动画](animation.md) |
-| state_machine          | 字符串  | 否  | 状态机脚本路径                   | [动画](animation.md) |
-| use_default_animation  | 枚举   | 否  | 可选 `rifle` / `pistol`     | [动画](animation.md) |
-| third_person_animation | 枚举   | 否  | 第三人称动画类型，默认 `default`     | [动画](animation.md) |
-| player_animator_3rd    | 字符串  | 否  | Player Animator 模组的第三人称动画 | [动画](animation.md) |
+| model                  | 字符串  | 是  | 枪械模型，在 `models/` 下寻找      | [基础显示](01_basic)   |
+| texture                | 字符串  | 是  | 枪械贴图，在 `textures/` 下寻找    | [基础显示](01_basic)   |
+| lod                    | 对象   | 否  | 低模配置（远距离渲染）               | [基础显示](01_basic)   |
+| animation              | 字符串  | 否  | 调用的动画文件                   | [动画](02_animation) |
+| state_machine          | 字符串  | 否  | 状态机脚本路径                   | [动画](02_animation) |
+| use_default_animation  | 枚举   | 否  | 可选 `rifle` / `pistol`     | [动画](02_animation) |
+| third_person_animation | 枚举   | 否  | 第三人称动画类型，默认 `default`     | [动画](02_animation) |
+| player_animator_3rd    | 字符串  | 否  | Player Animator 模组的第三人称动画 | [动画](02_animation) |
 ### HUD 与 GUI
 | 字段               | 类型   | 必填   | 说明                                                       | 详情                  |
 |------------------|------|------|----------------------------------------------------------|---------------------|
-| hud              | 字符串  | 否    | HUD 界面贴图，为空则会变成黑紫                                        | [HUD 与 GUI](hud.md) |
-| hud_empty        | 字符串  | 否    | 空弹时 HUD 贴图，为空则红色着色替换                                     | [HUD 与 GUI](hud.md) |
-| slot             | 字符串  | 否    | 背包/快捷栏槽位贴图                                               | [HUD 与 GUI](hud.md) |
-| ammo_count_style | 枚举   | 否    | 弹药显示样式，可选 `normal` / `percent`，默认 `normal`               | [HUD 与 GUI](hud.md) |
-| damage_style     | 枚举   | 否    | 伤害显示样式，可选 `total` / `per_projectile`，默认 `per_projectile` | [HUD 与 GUI](hud.md) |
-| show_crosshair   | 布尔值  | 否    | 瞄准时是否显示准星，默认 `false`（隐藏）                                 | [HUD 与 GUI](hud.md) |
+| hud              | 字符串  | 否    | HUD 界面贴图，为空则会变成黑紫                                        | [HUD 与 GUI](03_hud) |
+| hud_empty        | 字符串  | 否    | 空弹时 HUD 贴图，为空则红色着色替换                                     | [HUD 与 GUI](03_hud) |
+| slot             | 字符串  | 否    | 背包/快捷栏槽位贴图                                               | [HUD 与 GUI](03_hud) |
+| ammo_count_style | 枚举   | 否    | 弹药显示样式，可选 `normal` / `percent`，默认 `normal`               | [HUD 与 GUI](03_hud) |
+| damage_style     | 枚举   | 否    | 伤害显示样式，可选 `total` / `per_projectile`，默认 `per_projectile` | [HUD 与 GUI](03_hud) |
+| show_crosshair   | 布尔值  | 否    | 瞄准时是否显示准星，默认 `false`（隐藏）                                 | [HUD 与 GUI](03_hud) |
 ### 视角与变换
 | 字段             | 类型   | 必填   | 说明              | 详情                    |
 |----------------|------|------|-----------------|-----------------------|
-| transform      | 对象   | 否    | 各视角下的模型缩放       | [视角与变换](transform.md) |
-| iron_zoom      | 数值   | 否    | 机瞄放大倍数，默认 `1.2` | [视角与变换](transform.md) |
-| model_fov      | 数值   | 否    | 常驻持枪状态的 FOV     | [视角与变换](transform.md) |
-| zoom_model_fov | 数值   | 否    | 开镜时的 FOV        | [视角与变换](transform.md) |
+| transform      | 对象   | 否    | 各视角下的模型缩放       | [视角与变换](04_transform) |
+| iron_zoom      | 数值   | 否    | 机瞄放大倍数，默认 `1.2` | [视角与变换](04_transform) |
+| model_fov      | 数值   | 否    | 常驻持枪状态的 FOV     | [视角与变换](04_transform) |
+| zoom_model_fov | 数值   | 否    | 开镜时的 FOV        | [视角与变换](04_transform) |
 ### 枪口火焰
 | 字段           | 类型   | 必填   | 说明         | 详情                      |
 |--------------|------|------|------------|-------------------------|
-| muzzle_flash | 对象   | 否    | 枪口火焰的贴图和缩放 | [枪口火焰](muzzle_flash.md) |
+| muzzle_flash | 对象   | 否    | 枪口火焰的贴图和缩放 | [枪口火焰](05_muzzle_flash) |
 ### 抛壳
 | 字段    | 类型   | 必填   | 说明          | 详情             |
 |-------|------|------|-------------|----------------|
-| shell | 对象   | 否    | 抛壳效果，为空则不抛壳 | [抛壳](shell.md) |
+| shell | 对象   | 否    | 抛壳效果，为空则不抛壳 | [抛壳](06_shell) |
 ### 弹道特效
 | 字段                         | 类型   | 必填   | 说明                          | 详情              |
 |----------------------------|------|------|-----------------------------|-----------------|
-| ammo.tracer_color          | 字符串  | 否    | 曳光弹颜色（RGB 十六进制），如 `#FF8888` | [弹道特效](ammo.md) |
-| ammo.enable_bullet_hole    | 布尔值  | 否    | 是否保留弹孔贴花                    | [弹道特效](ammo.md) |
-| ammo.hit_surface_particles | 数组   | 否    | 命中方块表面时播放的粒子效果              | [弹道特效](ammo.md) |
-| ammo.particle              | 对象   | 否    | 子弹飞行时拖尾粒子                   | [弹道特效](ammo.md) |
+| ammo.tracer_color          | 字符串  | 否    | 曳光弹颜色（RGB 十六进制），如 `#FF8888` | [弹道特效](07_ammo) |
+| ammo.enable_bullet_hole    | 布尔值  | 否    | 是否保留弹孔贴花                    | [弹道特效](07_ammo) |
+| ammo.hit_surface_particles | 数组   | 否    | 命中方块表面时播放的粒子效果              | [弹道特效](07_ammo) |
+| ammo.particle              | 对象   | 否    | 子弹飞行时拖尾粒子                   | [弹道特效](07_ammo) |
 ### 音效
 | 字段     | 类型   | 必填   | 说明       | 详情              |
 |--------|------|------|----------|-----------------|
-| sounds | 对象   | 否    | 枪械所有音效配置 | [音效](sounds.md) |
+| sounds | 对象   | 否    | 枪械所有音效配置 | [音效](08_sounds) |
 ### 副手与快捷栏
 | 字段           | 类型   | 必填   | 说明          | 详情                          |
 |--------------|------|------|-------------|-----------------------------|
-| offhand_show | 对象   | 否    | 副手持枪时的显示配置  | [副手与快捷栏](offhand_hotbar.md) |
-| hotbar_show  | 对象   | 否    | 快捷栏持枪时的显示配置 | [副手与快捷栏](offhand_hotbar.md) |
+| offhand_show | 对象   | 否    | 副手持枪时的显示配置  | [副手与快捷栏](09_offhand_hotbar) |
+| hotbar_show  | 对象   | 否    | 快捷栏持枪时的显示配置 | [副手与快捷栏](09_offhand_hotbar) |
 ### 枪身文字与手柄震动
 | 字段           | 类型   | 必填   | 说明                    | 详情                      |
 |--------------|------|------|-----------------------|-------------------------|
-| text_show    | 对象   | 否    | 枪械模型上的文本渲染            | [枪身文字](text_show.md)    |
-| controllable | 对象   | 否    | Controllable 模组手柄震动配置 | [手柄震动](controllable.md) |
+| text_show    | 对象   | 否    | 枪械模型上的文本渲染            | [枪身文字](10_text_show)    |
+| controllable | 对象   | 否    | Controllable 模组手柄震动配置 | [手柄震动](11_controllable) |

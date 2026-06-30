@@ -1,3 +1,6 @@
+---
+order: 3
+---
 # 枪械 HUD 平面图
 ### 使用 BlockBench Screenshot Model 取得枪械侧视图
 我们可以使用 BlockBench 提供的 Screenshot Model 功能获取到枪械模型的平面图。    

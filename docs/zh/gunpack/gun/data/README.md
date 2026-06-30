@@ -98,6 +98,8 @@
 | melee.default.animation_type | 枚举   | 否    | 动画类型，可选 `melee_push` / `melee_stock` | [近战](15_melee)   |
 | melee.default.damage         | 数值   | 否    | 近战伤害                                 | [近战](15_melee)   |
 | melee.default.knockback      | 数值   | 否    | 近战击退                                 | [近战](15_melee)   |
+| melee.default.range_angle    | 数值   | 否    | 近战攻击范围角度                             | [近战](15_melee)   |
+| melee.default.prep           | 数值   | 否    | 近战前摇时长（秒）                            | [近战](15_melee)   |
 ### 配件槽
 | 字段                     | 类型   | 必填   | 说明                                                                         | 详情                   |
 |------------------------|------|------|----------------------------------------------------------------------------|----------------------|
@@ -114,3 +116,5 @@
 | heat.over_heat_time     | 数值   | 否    | 过热后延迟（ms）    | [过热](17_heat)      |
 | heat.min_inaccuracy     | 数值   | 否    | 过热对精度的最小影响倍率 | [过热](17_heat)      |
 | heat.max_inaccuracy     | 数值   | 否    | 过热对精度的最大影响倍率 | [过热](17_heat)      |
+| heat.min_rpm_mod        | 数值   | 否    | 过热对射速的最小影响倍率 | [过热](17_heat)      |
+| heat.max_rpm_mod        | 数值   | 否    | 过热对射速的最大影响倍率 | [过热](17_heat)      |
