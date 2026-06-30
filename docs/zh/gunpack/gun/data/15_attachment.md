@@ -15,7 +15,8 @@ order: 15
   "scope",
   "stock",
   "muzzle",
-  "extended_mag"
+  "extended_mag",
+  "laser"
 ]
 ```
 
