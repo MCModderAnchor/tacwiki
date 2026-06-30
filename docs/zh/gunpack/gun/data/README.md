@@ -32,20 +32,20 @@
 | burst_data       | 对象   | 否  | 连发模式数据（仅在 fire_mode 含 `burst` 时调用）                    | [开火机制](05_fire_mod) |
 | charging         | 对象   | 否  | 蓄力/延迟扳机配置                                             | [开火机制](05_fire_mod) |
 ### 子弹实体属性
-| 字段                           | 类型     | 必填 | 说明                         | 详情                |
-|------------------------------|--------|----|----------------------------|-------------------|
-| bullet.life                  | 数值     | 是  | 子弹存活时间（秒）                  | [子弹实体属性](06_bullet)   |
-| bullet.damage                | 数值     | 是  | 单发基础伤害                     | [子弹实体属性](06_bullet)   |
-| bullet.bullet_amount         | 数值     | 否  | 霰弹弹丸数，默认 1                 | [子弹实体属性](06_bullet)   |
-| bullet.speed                 | 数值     | 是  | 子弹初速度（m/s），游戏内默认全局弹速乘2     | [子弹实体属性](06_bullet)   |
-| bullet.gravity               | 数值     | 否  | 重力系数                       | [子弹实体属性](06_bullet)   |
-| bullet.friction              | 数值     | 否  | 空气阻力                       | [子弹实体属性](06_bullet)   |
-| bullet.knockback             | 数值     | 否  | 击退效果                       | [子弹实体属性](06_bullet)   |
-| bullet.pierce                | 数值     | 否  | 穿透数                        | [子弹实体属性](06_bullet)   |
-| bullet.ignite                | 布尔值/对象 | 否  | 是否点燃实体或方块                  | [子弹实体属性](06_bullet)   |
-| bullet.ignite_entity_time    | 数值     | 否  | 点燃实体时间（秒），默认 2             | [子弹实体属性](06_bullet)   |
-| bullet.explosion             | 对象     | 否  | 爆炸配置（半径、伤害、是否破坏方块等）        | [子弹实体属性](06_bullet)   |
-| bullet.tracer_count_interval | 数值     | 否  | 曳光弹间隔，`0` 为每发都是曳光弹，无此字段不发射 | [子弹特效](07_tracer) |
+| 字段                           | 类型     | 必填 | 说明                         | 详情                  |
+|------------------------------|--------|----|----------------------------|---------------------|
+| bullet.life                  | 数值     | 是  | 子弹存活时间（秒）                  | [子弹实体属性](06_bullet) |
+| bullet.damage                | 数值     | 是  | 单发基础伤害                     | [子弹实体属性](06_bullet) |
+| bullet.bullet_amount         | 数值     | 否  | 霰弹弹丸数，默认 1                 | [子弹实体属性](06_bullet) |
+| bullet.speed                 | 数值     | 是  | 子弹初速度（m/s），游戏内默认全局弹速乘2     | [子弹实体属性](06_bullet) |
+| bullet.gravity               | 数值     | 否  | 重力系数                       | [子弹实体属性](06_bullet) |
+| bullet.friction              | 数值     | 否  | 空气阻力                       | [子弹实体属性](06_bullet) |
+| bullet.knockback             | 数值     | 否  | 击退效果                       | [子弹实体属性](06_bullet) |
+| bullet.pierce                | 数值     | 否  | 穿透数                        | [子弹实体属性](06_bullet) |
+| bullet.ignite                | 布尔值/对象 | 否  | 是否点燃实体或方块                  | [子弹实体属性](06_bullet) |
+| bullet.ignite_entity_time    | 数值     | 否  | 点燃实体时间（秒），默认 2             | [子弹实体属性](06_bullet) |
+| bullet.explosion             | 对象     | 否  | 爆炸配置（半径、伤害、是否破坏方块等）        | [子弹实体属性](06_bullet) |
+| bullet.tracer_count_interval | 数值     | 否  | 曳光弹间隔，`0` 为每发都是曳光弹，无此字段不发射 | [子弹特效](07_tracer)   |
 ### 额外伤害
 | 字段                                | 类型   | 必填   | 说明                | 详情                      |
 |-----------------------------------|------|------|-------------------|-------------------------|
@@ -59,14 +59,14 @@
 | recoil.yaw              | 数组   | 否   | 横向后坐力曲线（time/value 关键帧） | [后坐力](09_recoil)   |
 | crawl_recoil_multiplier | 数值   | 否   | 趴下后坐力倍率                 | [后坐力](09_recoil)   |
 ### 精度与晃动
-| 字段                        | 类型   | 必填   | 说明             | 详情                   |
-|---------------------------|------|------|----------------|----------------------|
-| inaccuracy.stand          | 数值   | 否    | 站立散布           | [精度与晃动](10_inaccuracy)  |
-| inaccuracy.move           | 数值   | 否    | 移动散布           | [精度与晃动](10_inaccuracy)  |
-| inaccuracy.sneak          | 数值   | 否    | 潜行散布           | [精度与晃动](10_inaccuracy)  |
-| inaccuracy.lie            | 数值   | 否    | 趴下散布           | [精度与晃动](10_inaccuracy)  |
-| inaccuracy.aim            | 数值   | 否    | 瞄准散布           | [精度与晃动](10_inaccuracy)  |
-| hurt_bob_tweak_multiplier | 数值   | 否    | 受伤摇晃倍率，默认 0.05 | [精度与晃动](10_inaccuracy)  |
+| 字段                        | 类型   | 必填   | 说明             | 详情                     |
+|---------------------------|------|------|----------------|------------------------|
+| inaccuracy.stand          | 数值   | 否    | 站立散布           | [精度与晃动](10_inaccuracy) |
+| inaccuracy.move           | 数值   | 否    | 移动散布           | [精度与晃动](10_inaccuracy) |
+| inaccuracy.sneak          | 数值   | 否    | 潜行散布           | [精度与晃动](10_inaccuracy) |
+| inaccuracy.lie            | 数值   | 否    | 趴下散布           | [精度与晃动](10_inaccuracy) |
+| inaccuracy.aim            | 数值   | 否    | 瞄准散布           | [精度与晃动](10_inaccuracy) |
+| hurt_bob_tweak_multiplier | 数值   | 否    | 受伤摇晃倍率，默认 0.05 | [精度与晃动](10_inaccuracy) |
 ### 动作时长
 | 字段            | 类型   | 必填   | 说明        | 详情                         |
 |---------------|------|------|-----------|----------------------------|
@@ -89,13 +89,13 @@
 ### 枪械近战
 | 字段                           | 类型   | 必填   | 说明                                   | 详情               |
 |------------------------------|------|------|--------------------------------------|------------------|
-| melee.distance               | 数值   | 否    | 近战攻击范围，与配件加和                         | [枪械近战](14_melee)   |
-| melee.cooldown               | 数值   | 否    | 近战冷却时间（秒），与配件加和                      | [枪械近战](14_melee)   |
-| melee.default.animation_type | 枚举   | 否    | 动画类型，可选 `melee_push` / `melee_stock` | [枪械近战](14_melee)   |
-| melee.default.damage         | 数值   | 否    | 近战伤害                                 | [枪械近战](14_melee)   |
-| melee.default.knockback      | 数值   | 否    | 近战击退                                 | [枪械近战](14_melee)   |
-| melee.default.range_angle    | 数值   | 否    | 近战攻击范围角度                             | [枪械近战](14_melee)   |
-| melee.default.prep           | 数值   | 否    | 近战前摇时长（秒）                            | [枪械近战](14_melee)   |
+| melee.distance               | 数值   | 否    | 近战攻击范围，与配件加和                         | [枪械近战](14_melee) |
+| melee.cooldown               | 数值   | 否    | 近战冷却时间（秒），与配件加和                      | [枪械近战](14_melee) |
+| melee.default.animation_type | 枚举   | 否    | 动画类型，可选 `melee_push` / `melee_stock` | [枪械近战](14_melee) |
+| melee.default.damage         | 数值   | 否    | 近战伤害                                 | [枪械近战](14_melee) |
+| melee.default.knockback      | 数值   | 否    | 近战击退                                 | [枪械近战](14_melee) |
+| melee.default.range_angle    | 数值   | 否    | 近战攻击范围角度                             | [枪械近战](14_melee) |
+| melee.default.prep           | 数值   | 否    | 近战前摇时长（秒）                            | [枪械近战](14_melee) |
 ### 配件槽
 | 字段                     | 类型   | 必填   | 说明                                                                         | 详情                   |
 |------------------------|------|------|----------------------------------------------------------------------------|----------------------|

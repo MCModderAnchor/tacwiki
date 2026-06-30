@@ -51,7 +51,7 @@ order: 6
 
 ### 穿透数 `bullet.pierce`
 
-**可选**，数值类型。子弹可穿透的实体数量，默认 0。
+**可选**，数值类型。子弹可穿透的实体数量，默认 1。
 
 ```json
 "bullet": {
@@ -73,7 +73,7 @@ order: 6
 
 ### 阻力 `bullet.friction`
 
-**可选**，数值类型。子弹所受空气阻力，默认 0。
+**可选**，数值类型。子弹所受空气阻力，默认 0.01。
 
 ```json
 "bullet": {
@@ -153,5 +153,5 @@ order: 6
 :::
 
 ::: tip
-曳光弹相关配置 `bullet.tracer_count_interval` 见[弹道特效](07_tracer)，额外伤害配置 `bullet.extra_damage` 见[额外伤害](08_extra_damage)。
+曳光弹相关配置 `bullet.tracer_count_interval` 见[子弹特效](07_tracer)，额外伤害配置 `bullet.extra_damage` 见[额外伤害](08_extra_damage)。
 :::
