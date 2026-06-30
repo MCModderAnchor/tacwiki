@@ -1,24 +1,44 @@
 name: Build and Deploy
-on:   
+
+on:
   push:
     branches:
       - main
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
 
-    - name: vuepress-deploy
-      uses: IT4Change/vuepress-build-and-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.PERSONAL_SECRET }}
-        TARGET_REPO: MCModderAnchor/tacwiki
-        TARGET_BRANCH: gh_pages
-        BUILD_SCRIPT: |
-          npm install -g pnpm
-          pnpm install
-          pnpm build
-        BUILD_DIR: docs/.vuepress/dist/
-        CNAME: tacwiki.mcma.club
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Add CNAME
+        run: echo "tacwiki.mcma.club" > docs/.vuepress/dist/CNAME
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh_pages
+          publish_dir: docs/.vuepress/dist
+          force_orphan: true
