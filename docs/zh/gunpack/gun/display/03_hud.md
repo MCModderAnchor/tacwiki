@@ -20,6 +20,28 @@ order: 3
 
 HUD 贴图的长宽比应为 **3:1**。推荐分辨率：`180×60`、`192×64`、`384×128`。
 
+### 制作 HUD 平面图
+
+使用 BlockBench 的 **Screenshot Model** 功能获取枪模侧视图：
+
+1. 右侧面板切换至合适轴（默认按枪口朝左），按 `Z` 切换为「实体」显示模式。
+
+![切换视图](/gunpack/hud_icon/bb_toggle_view.png)
+
+![显示模式](/gunpack/hud_icon/bb_solid_mode.png)
+
+2. 按 `Ctrl+P` 截图保存为 `.png`。
+
+![保存图片](/gunpack/hud_icon/screenshot_save.png)
+
+3. 用图片处理工具缩放、裁剪为 3:1 长宽比。枪身较长者对齐中间轴线，手枪等较短者向右对齐。
+
+![侧视图](/gunpack/hud_icon/resize_texture_1.png)
+
+![手枪侧视图](/gunpack/hud_icon/resize_texture_2.png)
+
+4. 将图片放入 `textures/gun/hud/` 目录后，在 display JSON 中指定 `hud` 字段即可。
+
 ## 空弹 HUD `hud_empty`
 
 **可选**，字符串类型。弹匣打空时替换 HUD 显示的平面图。若为空，则在上方 `hud` 基础上叠加红色着色代替。
@@ -119,24 +141,3 @@ HUD 贴图的长宽比应为 **3:1**。推荐分辨率：`180×60`、`192×64`�
 
 ---
 
-## 制作 HUD 平面图
-
-使用 BlockBench 的 **Screenshot Model** 功能获取枪模侧视图：
-
-1. 右侧面板切换至合适轴（默认按枪口朝左），按 `Z` 切换为「实体」显示模式。
-
-![切换视图](/gunpack/hud_icon/bb_toggle_view.png)
-
-![显示模式](/gunpack/hud_icon/bb_solid_mode.png)
-
-2. 按 `Ctrl+P` 截图保存为 `.png`。
-
-![保存图片](/gunpack/hud_icon/screenshot_save.png)
-
-3. 用图片处理工具缩放、裁剪为 3:1 长宽比。枪身较长者对齐中间轴线，手枪等较短者向右对齐。
-
-![侧视图](/gunpack/hud_icon/resize_texture_1.png)
-
-![手枪侧视图](/gunpack/hud_icon/resize_texture_2.png)
-
-4. 将图片放入 `textures/gun/hud/` 目录后，在 display JSON 中指定 `hud` 字段即可。
