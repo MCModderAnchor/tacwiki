@@ -16,6 +16,7 @@ order: 2
 | aim_inaccuracy       | **瞄准精度**，影响开镜状态下的射击精度。           |
 | sneak_inaccuracy     | **潜行射击精度**，影响潜行状态下的射击精度。         |
 | lie_inaccuracy       | **趴伏射击精度**，影响趴伏状态下的射击精度。         |
+| move_inaccuracy      | **移动射击精度**，影响移动状态下的射击精度。         |
 | effective_range      | **射程**，影响枪械的射程。（无实际效果）           |
 | ammo_speed           | **弹速**，影响枪械开火后，子弹的速度。            |
 | pierce               | **穿透**，影响枪械子弹穿过实体的数量。            |
@@ -111,7 +112,15 @@ order: 2
 }
 ```
 
-因此这里只说明一些较为特殊的属性词条的用法。  
+因此这里只说明一些较为特殊的属性词条的用法。
+
+::: warning 旧版写法
+早期版本的 TACZ 中，`ads` 和 `recoil` 使用不同的字段名：
+- `ads_addend`（数值）→ 现在用 `ads` 对象内的 `addend` 等乘区
+- `recoil_modifier`（对象，`pitch`/`yaw` 百分比值）→ 现在用 `recoil` 对象内的 `pitch`/`yaw` 乘区
+
+默认枪包中部分老旧配件仍在使用旧版写法（如 `scope_acog_ta31`、`scope_lpvo_1_6`），建议新制作的配件统一使用新版写法。
+:::  
 
 ### weight (重量)
 
