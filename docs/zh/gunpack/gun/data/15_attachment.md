@@ -34,7 +34,7 @@ order: 15
 手枪类枪械通常会省略 `stock` 槽。最少配置可以只保留 `scope` 和 `extended_mag` 两个槽位。
 :::
 
-## 原厂配件 `builtin_attachments`
+## 原厂配件 `builtin_attachments`（内测版功能）
 
 **可选**，对象类型。定义枪械自带的"原厂"配件候选列表。这些配件是虚拟的，不需要从背包消耗实际物品即可选择安装。
 

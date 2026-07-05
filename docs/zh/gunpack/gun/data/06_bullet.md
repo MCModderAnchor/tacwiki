@@ -155,3 +155,5 @@ order: 6
 ::: tip
 曳光弹相关配置 `bullet.tracer_count_interval` 见[子弹特效](07_tracer)，额外伤害配置 `bullet.extra_damage` 见[额外伤害](08_extra_damage)。
 :::
+
+> 另请参见：[display - 抛壳](../display/06_shell) —— 弹壳抛出的物理效果（初速度、旋转、存活时间等）在 display 中配置。
