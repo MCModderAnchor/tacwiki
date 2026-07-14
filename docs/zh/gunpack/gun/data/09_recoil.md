@@ -60,3 +60,37 @@ order: 9
 ```
 
 趴下时 pitch 和 yaw 的值均乘以 0.5，后坐力减半。
+
+## 射击反推力 `recoil_push`
+
+**可选**，对象类型。定义开火时对射手施加的后坐力反推效果。不同于 `recoil` 影响的是准星上跳曲线，`recoil_push` 直接影响射手的移动——每次开火会按开火时射手视角的反方向推动一段距离，可用于制作一些特殊的表现效果。
+
+```json
+"recoil_push": {
+  "ground_strength": 0.25,
+  "air_strength": 0.25,
+  "sneak_strength": 0.1,
+  "crawl_strength": 0.0,
+  "per_projectile": false,
+  "projectile_multiplier": 0.35
+}
+```
+
+### 参数说明
+
+| 键                       | 类型   | 说明                                                |
+|-------------------------|------|---------------------------------------------------|
+| `ground_strength`       | 数值   | 站立/移动射击时的反推强度                                     |
+| `air_strength`          | 数值   | 空中（跳跃/飞行）射击时的反推强度                                 |
+| `sneak_strength`        | 数值   | 潜行（蹲下）射击时的反推强度                                    |
+| `crawl_strength`        | 数值   | 趴下（匍匐）射击时的反推强度。设为 `0` 时趴下射击不受反推影响                 |
+| `per_projectile`        | 布尔值  | 默认 `false`。设为 `true` 时，每次开火对每个弹丸分别计算反推，用于霰弹等多弹丸枪械 |
+| `projectile_multiplier` | 数值   | 仅在 `per_projectile: true` 时有意义，每个弹丸的推力倍率          |
+
+- 反推强度值越大，射击时射手被向后推的距离越大。
+- 潜行和趴下的反推强度通常设得比站立更低，体现低姿态射击的稳定性。
+- `per_projectile` + `projectile_multiplier` 的组合使霰弹枪的每颗弹丸都能产生反推，开火时射手受到的反推 = `弹丸数 × projectile_multiplier × 当前姿态强度`。
+
+::: tip
+`recoil_push` 也可以在配件中使用（如枪口、弹药改造），配件的 `recoil_push` 字段通过加数方式调整枪械已有的对应姿态反推强度。
+:::

@@ -20,17 +20,19 @@
 | script       | 字符串  | 否    | 指定枪械逻辑脚本，位于 `data/{命名空间}/scripts` | [逻辑脚本](03_script)      |
 | script_param | 对象   | 否    | 传给脚本的参数，内容取决于脚本需要                 | [逻辑脚本](03_script)      |
 ### 枪械行为与射速
-| 字段               | 类型   | 必填 | 说明                                                    | 详情                  |
-|------------------|------|----|-------------------------------------------------------|---------------------|
-| bolt             | 枚举   | 是  | 枪栓类型，可选 `open_bolt` / `closed_bolt` / `manual_action` | [枪械行为](04_behavior) |
-| bolt_action_time | 数值   | 否  | 拉栓上膛时长（秒），仅 `manual_action` 有效                        | [枪械行为](04_behavior) |
-| can_crawl        | 布尔值  | 否  | 是否允许趴下，默认 `true`                                      | [枪械行为](04_behavior) |
-| can_slide        | 布尔值  | 否  | 是否允许斜握，默认 `true`                                      | [枪械行为](04_behavior) |
-| rpm              | 数值   | 是  | 每分钟射速，最大 1200                                         | [开火机制](05_fire_mod) |
-| fire_mode        | 数组   | 是  | 开火模式列表，可选 `semi` / `auto` / `burst`                   | [开火机制](05_fire_mod) |
-| fire_mode_adjust | 对象   | 否  | 不同开火模式下的数值修正（伤害、射速、精度等）                               | [开火机制](05_fire_mod) |
-| burst_data       | 对象   | 否  | 连发模式数据（仅在 fire_mode 含 `burst` 时调用）                    | [开火机制](05_fire_mod) |
-| charging         | 对象   | 否  | 蓄力/延迟扳机配置                                             | [开火机制](05_fire_mod) |
+| 字段                       | 类型   | 必填 | 说明                                                    | 详情                  |
+|--------------------------|------|----|-------------------------------------------------------|---------------------|
+| bolt                     | 枚举   | 是  | 枪栓类型，可选 `open_bolt` / `closed_bolt` / `manual_action` | [枪械行为](04_behavior) |
+| bolt_action_time         | 数值   | 否  | 拉栓上膛时长（秒），仅 `manual_action` 有效                        | [枪械行为](04_behavior) |
+| can_crawl                | 布尔值  | 否  | 是否允许趴下，默认 `true`                                      | [枪械行为](04_behavior) |
+| can_slide                | 布尔值  | 否  | 是否允许斜握，默认 `true`                                      | [枪械行为](04_behavior) |
+| rpm                      | 数值   | 是  | 每分钟射速，最大 1200                                         | [开火机制](05_fire_mod) |
+| fire_mode                | 数组   | 是  | 开火模式列表，可选 `semi` / `auto` / `burst`                   | [开火机制](05_fire_mod) |
+| fire_mode_adjust         | 对象   | 否  | 不同开火模式下的数值修正（伤害、射速、精度等）                               | [开火机制](05_fire_mod) |
+| burst_data               | 对象   | 否  | 连发模式数据（仅在 fire_mode 含 `burst` 时调用）                    | [开火机制](05_fire_mod) |
+| charging                 | 对象   | 否  | 蓄力/延迟扳机配置                                             | [开火机制](05_fire_mod) |
+| force_aim_exit_on_reload | 布尔值  | 否  | 换弹时强制退出瞄准，换弹期间禁止重新开镜                                  | [枪械行为](04_behavior) |
+| force_aim_exit_on_bolt   | 布尔值  | 否  | 拉栓时强制退出瞄准，拉栓期间禁止重新开镜                                  | [枪械行为](04_behavior) |
 ### 子弹实体属性
 | 字段                           | 类型     | 必填 | 说明                         | 详情                  |
 |------------------------------|--------|----|----------------------------|---------------------|
@@ -53,11 +55,17 @@
 | extra_damage.head_shot_multiplier | 数值   | 否    | 爆头伤害倍率            | [额外伤害](08_extra_damage) |
 | extra_damage.damage_adjust        | 数组   | 否    | 距离衰减表，超过最远距离伤害为 0 | [额外伤害](08_extra_damage) |
 ### 后坐力
-| 字段                      | 类型   | 必填  | 说明                      | 详情                 |
-|-------------------------|------|-----|-------------------------|--------------------|
-| recoil.pitch            | 数组   | 否   | 纵向后坐力曲线（time/value 关键帧） | [后坐力](09_recoil)   |
-| recoil.yaw              | 数组   | 否   | 横向后坐力曲线（time/value 关键帧） | [后坐力](09_recoil)   |
-| crawl_recoil_multiplier | 数值   | 否   | 趴下后坐力倍率                 | [后坐力](09_recoil)   |
+| 字段                                | 类型   | 必填  | 说明                      | 详情                 |
+|-----------------------------------|------|-----|-------------------------|--------------------|
+| recoil.pitch                      | 数组   | 否   | 纵向后坐力曲线（time/value 关键帧） | [后坐力](09_recoil)   |
+| recoil.yaw                        | 数组   | 否   | 横向后坐力曲线（time/value 关键帧） | [后坐力](09_recoil)   |
+| crawl_recoil_multiplier           | 数值   | 否   | 趴下后坐力倍率                 | [后坐力](09_recoil)   |
+| recoil_push.ground_strength       | 数值   | 否   | 射击反推强度（地面）              | [后坐力](09_recoil)   |
+| recoil_push.air_strength          | 数值   | 否   | 射击反推强度（空中）              | [后坐力](09_recoil)   |
+| recoil_push.sneak_strength        | 数值   | 否   | 射击反推强度（潜行）              | [后坐力](09_recoil)   |
+| recoil_push.crawl_strength        | 数值   | 否   | 射击反推强度（趴下）              | [后坐力](09_recoil)   |
+| recoil_push.per_projectile        | 布尔值  | 否   | 多弹丸分别施加反推               | [后坐力](09_recoil)   |
+| recoil_push.projectile_multiplier | 数值   | 否   | 单弹丸反推倍率                 | [后坐力](09_recoil)   |
 ### 精度与晃动
 | 字段                        | 类型   | 必填   | 说明             | 详情                     |
 |---------------------------|------|------|----------------|------------------------|
