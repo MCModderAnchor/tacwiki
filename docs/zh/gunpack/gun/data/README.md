@@ -31,8 +31,8 @@
 | fire_mode_adjust         | 对象   | 否  | 不同开火模式下的数值修正（伤害、射速、精度等）                               | [开火机制](05_fire_mod) |
 | burst_data               | 对象   | 否  | 连发模式数据（仅在 fire_mode 含 `burst` 时调用）                    | [开火机制](05_fire_mod) |
 | charging                 | 对象   | 否  | 蓄力/延迟扳机配置                                             | [开火机制](05_fire_mod) |
-| force_aim_exit_on_reload | 布尔值  | 否  | 换弹时强制退出瞄准，换弹期间禁止重新开镜                                  | [枪械行为](04_behavior) |
-| force_aim_exit_on_bolt   | 布尔值  | 否  | 拉栓时强制退出瞄准，拉栓期间禁止重新开镜                                  | [枪械行为](04_behavior) |
+| force_aim_exit_on_reload | 布尔值  | 否  | 换弹时强制退出瞄准，换弹期间禁止重新开镜(内测版功能)                           | [枪械行为](04_behavior) |
+| force_aim_exit_on_bolt   | 布尔值  | 否  | 拉栓时强制退出瞄准，拉栓期间禁止重新开镜(内测版功能)                           | [枪械行为](04_behavior) |
 ### 子弹实体属性
 | 字段                           | 类型     | 必填 | 说明                         | 详情                  |
 |------------------------------|--------|----|----------------------------|---------------------|
@@ -60,12 +60,12 @@
 | recoil.pitch                      | 数组   | 否   | 纵向后坐力曲线（time/value 关键帧） | [后坐力](09_recoil)   |
 | recoil.yaw                        | 数组   | 否   | 横向后坐力曲线（time/value 关键帧） | [后坐力](09_recoil)   |
 | crawl_recoil_multiplier           | 数值   | 否   | 趴下后坐力倍率                 | [后坐力](09_recoil)   |
-| recoil_push.ground_strength       | 数值   | 否   | 射击反推强度（地面）              | [后坐力](09_recoil)   |
-| recoil_push.air_strength          | 数值   | 否   | 射击反推强度（空中）              | [后坐力](09_recoil)   |
-| recoil_push.sneak_strength        | 数值   | 否   | 射击反推强度（潜行）              | [后坐力](09_recoil)   |
-| recoil_push.crawl_strength        | 数值   | 否   | 射击反推强度（趴下）              | [后坐力](09_recoil)   |
-| recoil_push.per_projectile        | 布尔值  | 否   | 多弹丸分别施加反推               | [后坐力](09_recoil)   |
-| recoil_push.projectile_multiplier | 数值   | 否   | 单弹丸反推倍率                 | [后坐力](09_recoil)   |
+| recoil_push.ground_strength       | 数值   | 否   | 射击反推强度（地面）(内测版功能)       | [后坐力](09_recoil)   |
+| recoil_push.air_strength          | 数值   | 否   | 射击反推强度（空中）(内测版功能)       | [后坐力](09_recoil)   |
+| recoil_push.sneak_strength        | 数值   | 否   | 射击反推强度（潜行）(内测版功能)       | [后坐力](09_recoil)   |
+| recoil_push.crawl_strength        | 数值   | 否   | 射击反推强度（趴下）(内测版功能)       | [后坐力](09_recoil)   |
+| recoil_push.per_projectile        | 布尔值  | 否   | 多弹丸分别施加反推(内测版功能)        | [后坐力](09_recoil)   |
+| recoil_push.projectile_multiplier | 数值   | 否   | 单弹丸反推倍率(内测版功能)          | [后坐力](09_recoil)   |
 ### 精度与晃动
 | 字段                        | 类型   | 必填   | 说明             | 详情                     |
 |---------------------------|------|------|----------------|------------------------|
@@ -109,7 +109,7 @@
 |------------------------|------|------|----------------------------------------------------------------------------|----------------------|
 | allow_attachment_types | 枚举数组 | 否    | 开放的配件槽，可选 `scope` / `stock` / `muzzle` / `grip` / `laser` / `extended_mag` | [配件槽](15_attachment) |
 | builtin_attachments    | 对象   | 否    | 原厂配件候选列表及默认预装件 （内测版功能）                                                     | [配件槽](15_attachment) |
-| exclusive_attachments  | 对象   | 否    | 为特定配件指派独立属性（⚠ 功能待修复）                                                       | [配件槽](15_attachment) |
+| exclusive_attachments  | 对象   | 否    | 为特定配件指派独立属性                                                                | [配件槽](15_attachment) |
 ### 过热
 | 字段                      | 类型   | 必填   | 说明           | 详情                 |
 |-------------------------|------|------|--------------|--------------------|
