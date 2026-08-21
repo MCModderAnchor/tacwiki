@@ -28,7 +28,7 @@ order: 7
 }
 ```
 
-## 命中粒子 `ammo.hit_surface_particles`（内测版功能）
+## 命中粒子 `ammo.hit_surface_particles` <Badge text="内测版功能" type="warning" />
 
 **可选**，数组类型。子弹命中方块表面时额外播放的粒子效果。每个元素为一个对象：
 

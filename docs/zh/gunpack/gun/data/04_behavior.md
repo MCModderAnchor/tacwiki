@@ -47,7 +47,7 @@ order: 4
 斜握在玩家潜行（蹲下）时触发，仅改变持枪姿态的视觉表现，不影响任何数值。
 :::
 
-## 换弹退出瞄准 `force_aim_exit_on_reload`(内测版功能)
+## 换弹退出瞄准 `force_aim_exit_on_reload` <Badge text="内测版功能" type="warning" />
 
 **可选**，布尔值。是否在换弹时强制退出瞄准（开镜）状态，默认 `false`。
 
@@ -62,7 +62,7 @@ order: 4
 
 典型用途：机枪（M249、PKM）、掰管霰弹枪（DB Long/Short）、左轮手枪（Taurus 500/943、Rhino 357）。这些枪械的换弹动画在瞄准（ADS）视角下会发生穿模或视觉异常，因此需要强制退出。
 
-## 拉栓退出瞄准 `force_aim_exit_on_bolt`(内测版功能)
+## 拉栓退出瞄准 `force_aim_exit_on_bolt` <Badge text="内测版功能" type="warning" />
 
 **可选**，布尔值。是否在拉栓时强制退出瞄准状态，默认 `false`。
 

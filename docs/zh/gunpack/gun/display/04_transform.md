@@ -40,7 +40,7 @@ order: 4
 
 此例来自默认枪包 `ak47_display.json`。该值越大，机瞄时视野越近。
 
-## 常驻 FOV `model_fov`（内测版功能）
+## 常驻 FOV `model_fov` <Badge text="内测版功能" type="warning" />
 
 **可选**，数值类型。常驻持枪状态下手部模型的视场角（FOV）。调整此值影响腰射时的视觉范围。
 

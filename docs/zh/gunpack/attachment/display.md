@@ -21,12 +21,13 @@ order: 3
 | fov                      | 数值    | 否    | 红点/全息开镜后枪身渲染 FOV（默认 70）        |
 | views                    | 数组    | 否    | 各倍率对应的视角定位组索引，与 `zoom` 一一对应    |
 | views_fov                | 数组    | 否    | 放大瞄具各倍率镜内 FOV，与 `zoom` 一一对应    |
-| idle_scope_height_adjust | 数值    | 否    | 腰射状态下枪身高度偏移(内测版功能)             |
+| idle_scope_height_adjust | 数值    | 否    | 腰射状态下枪身高度偏移 <Badge text="内测版功能" type="warning" />             |
 | show_mount               | 布尔值   | 否    | 安装瞄具后是否渲染枪械的 `mount` 定位组模型     |
 | laser                    | 对象    | 否    | 激光/镭射配置                        |
 | adapter                  | 字符串   | 否    | 配件接口标签                         |
 | text_show                | 对象    | 否    | 配件模型上的文本渲染                     |
 | show_muzzle              | 布尔值   | 否    | 安装后是否仍显示枪械默认枪口（刺刀用）            |
+| muzzle_flash_offset      | 数值    | 否    | 枪口粒子发射点前移量（Blockbench 模型单位，16=1格），默认 `0` <Badge text="内测版功能" type="warning" /> |
 
 > \* 弹药改装、弹匣类配件不渲染 3D 模型，无 `model` / `texture` 字段。
 
@@ -205,7 +206,7 @@ order: 3
 - `zoom` 和 `views_fov` / `fov` 各自独立，互不影响
 :::
 
-### 腰射枪身高度偏移 `idle_scope_height_adjust`（内测版功能）
+### 腰射枪身高度偏移 `idle_scope_height_adjust` <Badge text="内测版功能" type="warning" />
 
 **仅筒状瞄具**，数值类型。安装瞄具后，在腰射（未开镜）持枪状态下，枪身整体的高度偏移量。用于防止体积较大的瞄具在画面中占比过大、遮挡视野。
 
@@ -297,7 +298,7 @@ order: 3
 
 此例来自 `scope_mk5hd_display.json`。
 
-### 测距仪 `rangefinder`(内测版功能)
+### 测距仪 `rangefinder` <Badge text="内测版功能" type="warning" />
 
 瞄具还支持测距仪占位符 `%rangefinder%`，可在镜内实时显示准星指向目标的距离。使用该占位符时，需在对应文本组中配置 `rangefinder` 子对象：
 
@@ -340,6 +341,18 @@ order: 3
 ```
 
 此例来自 `bayonet_m9_display.json`。
+
+## 枪口粒子偏移 `muzzle_flash_offset` <Badge text="内测版功能" type="warning" />
+
+**可选**，数值类型。将第一人称枪口粒子（枪焰与枪烟）的发射原点沿枪口方向前移。主要用于加装长消音器或制退器后，粒子从消音器口喷出而非原枪口。
+
+单位：Blockbench 模型单位（16 单位 = 1 格），默认 `0`。
+
+```json
+"muzzle_flash_offset": 24
+```
+
+此例将粒子发射点前移 24 像素（1.5 格），适用于较长的消音器。
 
 ## 文件结构
 
