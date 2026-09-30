@@ -112,6 +112,23 @@ order: 3
 
 此例来自默认枪包 `muzzle_silencer_mirage_display.json`。
 
+#### 调整响度与音调 <Badge text="内测版功能" type="warning" />
+
+与枪械音效一致，配件音效也可以写成**对象**，单独控制响度、音调及其随机浮动范围：
+
+```json
+"sounds": {
+  "install": {
+    "id": "tacz:attachments/muzzle_general",
+    "volume": 0.8,
+    "pitch": 1.1
+  },
+  "uninstall": "tacz:attachments/muzzle_general"
+}
+```
+
+可用字段（`id` / `volume` / `pitch` / `volume_random_range` / `pitch_random_range`）与枪械音效完全相同，详见 [枪械 display - 音效](../gun/display/08_sounds)。
+
 默认枪包提供了多套通用装卸音效：
 - `attachment_general_a` / `attachment_general_b` — 通用配件装卸
 - `attachment_general_uninstall` — 通用卸下

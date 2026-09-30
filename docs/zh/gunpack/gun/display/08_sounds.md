@@ -31,6 +31,8 @@ order: 8
 | `melee_push`      | 推击近战音效                   | 有默认音效，可不写             |
 | `melee_stock`     | 枪托打击音效                   | 有默认音效，可不写             |
 
+每个音效键有两种写法：**字符串**（只指定音效 id）或**对象**（额外控制响度与音调）。
+
 ```json
 "sounds": {
   "draw": "tacz:ak47/ak47_draw",
@@ -56,17 +58,67 @@ order: 8
 
 此例来自默认枪包 `ak47_display.json`。
 
-- 音效文件使用 `.ogg` 格式，在枪包根目录下的 `sounds/` 中寻找。
+- 音效文件使用 `.ogg` 格式，在枪包根目录下的 `tacz_sounds/` 中寻找。
 - `shoot` / `silence` 为本地玩家听到的音效（双声道，更丰富）；`shoot_3p` / `silence_3p` 为其他玩家听到的音效（单声道，性能更好）。
 - 标注「有默认音效」的键可以不填，模组会自动使用内置默认音效。
 
-> 文件位置：`{枪包根目录}/sounds/{命名空间}/`（如 `sounds/tacz/ak47/ak47_shoot.ogg`）
+> 文件位置：`{枪包根目录}/tacz_sounds/{命名空间}/`（如 `tacz_sounds/tacz/ak47/ak47_shoot.ogg`）
+
+### 调整响度与音调 <Badge text="内测版功能" type="warning" />
+
+音效键写成**对象**时，可以单独控制响度、音调及其随机浮动范围：
+
+```json
+"sounds": {
+  "shoot": {
+    "id": "tacz:ak47/ak47_shoot",
+    "volume": 0.8,
+    "pitch": 0.9,
+    "volume_random_range": 0.05,
+    "pitch_random_range": 0.1
+  }
+}
+```
+
+| 键                     | 类型  | 必填   | 说明                                |
+|-----------------------|-----|------|-----------------------------------|
+| `id`                  | 字符串 | **是** | 音效 id，同时也是回退时使用的 sound event id   |
+| `volume`              | 数值  | 否    | 响度，须 ≥ 0；不填则使用该情景的默认值             |
+| `pitch`               | 数值  | 否    | 音调，须 > 0；不填则使用该情景的默认值             |
+| `volume_random_range` | 数值  | 否    | 每次播放时响度在 ± 该值范围内随机，须 ≥ 0          |
+| `pitch_random_range`  | 数值  | 否    | 每次播放时音调在 ± 该值范围内随机，须 ≥ 0          |
+
+两种写法可以混用，只给需要调整的音效写对象即可：
+
+```json
+"sounds": {
+  "shoot": {
+    "id": "tacz:ak47/ak47_shoot",
+    "pitch_random_range": 0.08
+  },
+  "reload_empty": "tacz:ak47/ak47_reload_empty"
+}
+```
+
+::: tip
+`*_random_range` 的作用是让每次播放略有差异，避免连发时听起来像复读机。**建议只给开火类音效使用**——换弹、检视这类音效加了随机反而显得不自然。
+:::
+
+## 音源查找与回退
+
+音效 id 的解析顺序：
+
+1. **优先**在枪包目录下的 `tacz_sounds/` 中查找对应的 `.ogg` 文件；
+2. 找不到时，**回退**到同 id 的 **sound event**（由 `sounds.json` 注册，音源可能来自原版或其他模组）；
+3. 两者都不存在时，跳过播放并在日志中输出警告。
+
+**这意味着枪包只需提供自己的专属音效**——缺的那部分若在其他模组中有同 id 的音源，仍能正常发声。
 
 ## 文件结构
 
 ```
 {枪包根目录}
-└─ sounds
+└─ tacz_sounds
    └─ {命名空间}
       └─ ak47
          ├─ ak47_draw.ogg
