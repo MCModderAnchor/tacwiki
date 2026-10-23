@@ -23,6 +23,7 @@ order: 3
 | views_fov                | 数组    | 否    | 放大瞄具各倍率镜内 FOV，与 `zoom` 一一对应    |
 | idle_scope_height_adjust | 数值    | 否    | 腰射状态下枪身高度偏移 <Badge text="内测版功能" type="warning" />             |
 | show_mount               | 布尔值   | 否    | 安装瞄具后是否渲染枪械的 `mount` 定位组模型     |
+| scope_lens               | 对象    | 否    | 瞄具镜片效果：畸变、暗角、色调、夜视/热成像 <Badge text="内测版功能" type="warning" /> |
 | laser                    | 对象    | 否    | 激光/镭射配置                        |
 | adapter                  | 字符串   | 否    | 配件接口标签                         |
 | text_show                | 对象    | 否    | 配件模型上的文本渲染                     |
@@ -242,6 +243,87 @@ order: 3
 ```
 
 此例来自 `scope_aug_default_display.json`。AUG 自带的一体化瞄具本身就包含了镜桥结构，安装后会与枪械自带的 `mount` 模型重叠，因此设为 `false` 隐藏枪械镜桥。
+
+### 镜片效果 `scope_lens` <Badge text="内测版功能" type="warning" />
+
+**仅筒状瞄具**，对象类型。控制开镜时镜片内的画面表现，包括光学畸变、暗角、色调以及夜视 / 热成像。所有键均可省略，缺省时使用普通光学镜片效果。
+
+**镜片轮廓无需手动配置**：模组会根据模型中 `ocular` 分组的形状自动生成距离场，畸变和暗角沿该轮廓分布。
+
+| 键                   | 类型 | 默认值         | 取值范围    | 说明                |
+|---------------------|----|-------------|---------|-------------------|
+| `distortion`        | 数值 | `0.05`      | 0 ~ 0.2 | 镜片边缘的桶形畸变强度       |
+| `aberration`        | 数值 | `0.007`     | 0 ~ 0.03 | 边缘色散（色差）强度        |
+| `edge_width`        | 数值 | `0.35`      | 0 ~ 2   | 畸变与色散的作用范围，从边缘向内的宽度 |
+| `vignette_strength` | 数值 | `1.0`       | 0 ~ 1   | 暗角强度，`0` 为关闭      |
+| `vignette_width`    | 数值 | `0.35`      | 0 ~ 2   | 暗角范围              |
+| `tint`              | 字符串 | `"#70AEE8"` | 十六进制颜色  | 镜片整体色调            |
+| `tint_strength`     | 数值 | `0.2`       | 0 ~ 1   | 色调的混合强度           |
+| `vision_mode`       | 枚举 | `NORMAL`    | 见下表     | 成像模式              |
+| `vision_gain`       | 数值 | `3.0`       | 1 ~ 12  | 夜视 / 热成像的画面增益     |
+| `vision_noise`      | 数值 | `0.025`     | 0 ~ 0.2 | 夜视 / 热成像的电子噪点强度   |
+
+**成像模式 `vision_mode`**：
+
+| 值                    | 说明            |
+|----------------------|---------------|
+| `NORMAL`             | 普通光学镜片（默认）    |
+| `NIGHT_VISION_GREEN` | 绿色夜视          |
+| `NIGHT_VISION_WHITE` | 白色夜视          |
+| `THERMAL_WHITE_HOT`  | 热成像，热源显示为白色   |
+| `THERMAL_BLACK_HOT`  | 热成像，热源显示为黑色   |
+| `THERMAL_IRONBOW`    | 热成像，铁虹彩色阶     |
+
+```json
+"scope_lens": {
+  "distortion": 0.08,
+  "aberration": 0.01,
+  "edge_width": 0.4,
+  "vignette_strength": 0.8,
+  "vignette_width": 0.4,
+  "tint": "#70AEE8",
+  "tint_strength": 0.25,
+  "vision_mode": "THERMAL_WHITE_HOT",
+  "vision_gain": 4.0,
+  "vision_noise": 0.03
+}
+```
+
+::: tip 热成像的实体筛选
+热成像模式只会让"热源"显影：**生物**（`LivingEntity`）默认视为热源，非生物默认不是。可以用数据包标签 `tacz:thermal_imaging/blacklist` 与 `tacz:thermal_imaging/whitelist` 覆盖（值为实体类型 ID）：
+
+- **黑名单优先**：即使同时出现在白名单中，黑名单仍然强制该实体不显影；
+- 白名单用于让**非生物**实体（如载具、机械）显影。
+
+默认黑名单仅包含 `minecraft:armor_stand`（盔甲架是生物但不应显影）。
+:::
+
+**自定义热源规则**：在枪包中新增同名标签文件即可。注意标签 ID 固定为 `tacz:` 命名空间，因此文件要放在 `data/tacz/` 下，而不是自己的命名空间。
+
+> 文件位置：`{枪包根目录}/data/tacz/tags/entity_types/thermal_imaging/blacklist.json`
+
+```json
+{
+  "replace": false,
+  "values": [
+    "minecraft:villager",
+    "mymod:sentry_drone"
+  ]
+}
+```
+
+`replace` 为 `false` 时与已有内容**合并**，因此无需重复声明 `minecraft:armor_stand`。若希望某个**非生物**实体（载具、机械等）在热成像中显影，则改用同目录下的 `whitelist.json`：
+
+> 文件位置：`{枪包根目录}/data/tacz/tags/entity_types/thermal_imaging/whitelist.json`
+
+```json
+{
+  "replace": false,
+  "values": [
+    "mymod:patrol_vehicle"
+  ]
+}
+```
 
 ## 激光/镭射 `laser`
 

@@ -33,6 +33,7 @@
 | charging                 | 对象   | 否  | 蓄力/延迟扳机配置                                             | [开火机制](05_fire_mod) |
 | force_aim_exit_on_reload | 布尔值  | 否  | 换弹时强制退出瞄准，换弹期间禁止重新开镜 <Badge text="内测版功能" type="warning" />                           | [枪械行为](04_behavior) |
 | force_aim_exit_on_bolt   | 布尔值  | 否  | 拉栓时强制退出瞄准，拉栓期间禁止重新开镜 <Badge text="内测版功能" type="warning" />                           | [枪械行为](04_behavior) |
+| allow_ammo_unload        | 布尔值  | 否  | 是否允许主动卸弹，默认 `false`；未配 `script` 的枪械默认可卸 <Badge text="内测版功能" type="warning" />          | [枪械行为](04_behavior) |
 ### 子弹实体属性
 | 字段                           | 类型     | 必填 | 说明                         | 详情                  |
 |------------------------------|--------|----|----------------------------|---------------------|

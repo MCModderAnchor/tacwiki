@@ -5,7 +5,7 @@ order: 4
 
 槽位适配器是一种特殊的中间件，安装于枪械配件槽和实际配件之间。**它用自身的 `allowed_attachments` 完全替换枪械原有的允许范围**，从而重新划分该槽位可安装的配件种类。同时适配器模型会先渲染在枪械上，配件再以 `mount_offset` 偏移安装在适配器上方。
 
-目前槽位适配器仅支持 `scope`（瞄具）槽，共三款增高座。
+目前槽位适配器仅支持 `scope`（瞄具）槽，默认枪包共提供五款增高座。
 
 ## 枪械启用
 
@@ -38,7 +38,9 @@ order: 4
 
 ```json
 [
-  "tacz:riser_rail_mid"
+  "tacz:riser_rail_mid",
+  "tacz:riser_rail_high",
+  "tacz:riser_rail_unity"
 ]
 ```
 
@@ -120,6 +122,8 @@ order: 4
 | `tacz:riser_pistol_low`  | 手枪低增高座 | 0.375（6 px）    | 10      | `#tacz:pistol_sight`  | 步枪装手枪红点（低） |
 | `tacz:riser_pistol_high` | 手枪高增高座 | 1.25（20 px）    | 11      | `#tacz:pistol_sight`  | 步枪装手枪红点（高） |
 | `tacz:riser_rail_mid`    | 导轨中增高座 | 0.75（12 px）    | 20      | `#tacz:scope_sight`   | 调整全息镜高度/视野 |
+| `tacz:riser_rail_unity`  | Unity 增高座 | 0.85（13.6 px）  | 20      | `#tacz:scope_sight`   | 全息镜高度微调     |
+| `tacz:riser_rail_high`   | 导轨高增高座 | 1.825（29.2 px） | 20      | `#tacz:scope_sight`   | 全息镜大幅抬高     |
 
 手枪红点族（`pistol_sight`）：SRO、RMR、ACRO、DeltaPoint、FastFire、PK06 等手枪规格瞄具。
 
