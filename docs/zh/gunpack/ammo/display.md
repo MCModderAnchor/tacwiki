@@ -17,10 +17,10 @@ order: 2
 | `slot`                     | 字符串   | 否    | 背包/快捷栏槽位 2D 贴图                                     |
 | `entity`                   | 对象    | 否    | 子弹实体模型（火箭弹等需要绘制弹头的弹药）                              |
 | `shell`                    | 对象    | 否    | 弹壳模型（枪械抛壳时渲染）                                      |
-| `particle`                 | 对象    | 否    | 弹药实体飞行时拖尾的粒子 <Badge text="内测版功能" type="warning" /> |
-| `hit_surface_particles`    | 数组    | 否    | 命中方块表面时播放的粒子 <Badge text="内测版功能" type="warning" /> |
-| `hit_block_particle_count` | 数值    | 否    | 命中方块时的粒子数量 <Badge text="内测版功能" type="warning" /> |
-| `enable_bullet_hole`       | 布尔值   | 否    | 是否保留弹孔贴花，默认 `true` <Badge text="内测版功能" type="warning" /> |
+| `particle`                 | 对象    | 否    | 弹药实体飞行时拖尾的粒子 |
+| `hit_surface_particles`    | 数组    | 否    | 命中方块表面时播放的粒子 |
+| `hit_block_particle_count` | 数值    | 否    | 命中方块时的粒子数量 |
+| `enable_bullet_hole`       | 布尔值   | 否    | 是否保留弹孔贴花，默认 `true` |
 | `tracer_color`             | 字符串   | 否    | 曳光颜色（须为 `#RRGGBB`），默认白色                            |
 | `transform`                | 对象    | 否    | 各场景下的模型缩放                                          |
 
@@ -112,7 +112,7 @@ order: 2
 
 ## 粒子
 
-### 开火拖尾 `particle` <Badge text="内测版功能" type="warning" />
+### 开火拖尾 `particle`
 
 **可选**，对象类型。弹药实体飞行时拖尾的粒子效果。
 
@@ -134,7 +134,7 @@ order: 2
 }
 ```
 
-### 命中表面粒子 `hit_surface_particles` <Badge text="内测版功能" type="warning" />
+### 命中表面粒子 `hit_surface_particles`
 
 **可选**，数组类型。子弹命中方块表面时额外播放的粒子效果，用于表现弹着点扬尘、火花等。每个元素为一个对象：
 
@@ -181,7 +181,7 @@ order: 2
 
 > 超出上限的取值会被**静默钳制**到上限，不会报错。例如 `spread_angle` 填 `120`，实际按 `89` 处理。
 
-### 命中方块粒子数量 `hit_block_particle_count` <Badge text="内测版功能" type="warning" />
+### 命中方块粒子数量 `hit_block_particle_count`
 
 **可选**，数值类型。命中方块时生成的粒子数量。
 
@@ -191,7 +191,7 @@ order: 2
 
 ## 弹孔与曳光
 
-### 弹孔贴花 `enable_bullet_hole` <Badge text="内测版功能" type="warning" />
+### 弹孔贴花 `enable_bullet_hole`
 
 **可选**，布尔值，默认 `true`。是否保留命中方块表面的弹孔贴花。
 

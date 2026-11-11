@@ -65,7 +65,7 @@ order: 8
 
 > 文件位置：`{枪包根目录}/tacz_sounds/{命名空间}/`（如 `tacz_sounds/tacz/ak47/ak47_shoot.ogg`）
 
-### 调整响度与音调 <Badge text="内测版功能" type="warning" />
+### 调整响度与音调
 
 音效键写成**对象**时，可以单独控制响度、音调及其随机浮动范围：
 

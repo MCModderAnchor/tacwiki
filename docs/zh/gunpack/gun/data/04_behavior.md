@@ -47,7 +47,7 @@ order: 4
 斜握在玩家潜行（蹲下）时触发，仅改变持枪姿态的视觉表现，不影响任何数值。
 :::
 
-## 换弹退出瞄准 `force_aim_exit_on_reload` <Badge text="内测版功能" type="warning" />
+## 换弹退出瞄准 `force_aim_exit_on_reload`
 
 **可选**，布尔值。是否在换弹时强制退出瞄准（开镜）状态，默认 `false`。
 
@@ -62,7 +62,7 @@ order: 4
 
 典型用途：机枪（M249、PKM）、掰管霰弹枪（DB Long/Short）、左轮手枪（Taurus 500/943、Rhino 357）。这些枪械的换弹动画在瞄准（ADS）视角下会发生穿模或视觉异常，因此需要强制退出。
 
-## 拉栓退出瞄准 `force_aim_exit_on_bolt` <Badge text="内测版功能" type="warning" />
+## 拉栓退出瞄准 `force_aim_exit_on_bolt`
 
 **可选**，布尔值。是否在拉栓时强制退出瞄准状态，默认 `false`。
 
@@ -77,7 +77,7 @@ order: 4
 
 > 另请参见：[display - 动画与状态机](../display/02_animation) —— `bolt` 枪栓类型影响动画状态机的行为，特殊枪栓类型通常需要自定义状态机脚本。
 
-## 卸弹 `allow_ammo_unload` <Badge text="内测版功能" type="warning" />
+## 卸弹 `allow_ammo_unload`
 
 **可选**，布尔值。是否允许玩家用**卸弹键**（默认 `Alt + R`，可在按键设置中修改）主动卸出枪内弹药，默认 `false`。
 

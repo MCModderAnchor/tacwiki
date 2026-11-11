@@ -21,14 +21,14 @@ order: 3
 | fov                      | 数值    | 否    | 红点/全息开镜后枪身渲染 FOV（默认 70）        |
 | views                    | 数组    | 否    | 各倍率对应的视角定位组索引，与 `zoom` 一一对应    |
 | views_fov                | 数组    | 否    | 放大瞄具各倍率镜内 FOV，与 `zoom` 一一对应    |
-| idle_scope_height_adjust | 数值    | 否    | 腰射状态下枪身高度偏移 <Badge text="内测版功能" type="warning" />             |
+| idle_scope_height_adjust | 数值    | 否    | 腰射状态下枪身高度偏移             |
 | show_mount               | 布尔值   | 否    | 安装瞄具后是否渲染枪械的 `mount` 定位组模型     |
-| scope_lens               | 对象    | 否    | 瞄具镜片效果：畸变、暗角、色调、夜视/热成像 <Badge text="内测版功能" type="warning" /> |
+| scope_lens               | 对象    | 否    | 瞄具镜片效果：畸变、暗角、色调、夜视/热成像 |
 | laser                    | 对象    | 否    | 激光/镭射配置                        |
 | adapter                  | 字符串   | 否    | 配件接口标签                         |
 | text_show                | 对象    | 否    | 配件模型上的文本渲染                     |
 | show_muzzle              | 布尔值   | 否    | 安装后是否仍显示枪械默认枪口（刺刀用）            |
-| muzzle_flash_offset      | 数值    | 否    | 枪口粒子发射点前移量（Blockbench 模型单位，16=1格），默认 `0` <Badge text="内测版功能" type="warning" /> |
+| muzzle_flash_offset      | 数值    | 否    | 枪口粒子发射点前移量（Blockbench 模型单位，16=1格），默认 `0` |
 
 > \* 弹药改装、弹匣类配件不渲染 3D 模型，无 `model` / `texture` 字段。
 
@@ -113,7 +113,7 @@ order: 3
 
 此例来自默认枪包 `muzzle_silencer_mirage_display.json`。
 
-#### 调整响度与音调 <Badge text="内测版功能" type="warning" />
+#### 调整响度与音调
 
 与枪械音效一致，配件音效也可以写成**对象**，单独控制响度、音调及其随机浮动范围：
 
@@ -224,7 +224,7 @@ order: 3
 - `zoom` 和 `views_fov` / `fov` 各自独立，互不影响
 :::
 
-### 腰射枪身高度偏移 `idle_scope_height_adjust` <Badge text="内测版功能" type="warning" />
+### 腰射枪身高度偏移 `idle_scope_height_adjust`
 
 **仅筒状瞄具**，数值类型。安装瞄具后，在腰射（未开镜）持枪状态下，枪身整体的高度偏移量。用于防止体积较大的瞄具在画面中占比过大、遮挡视野。
 
@@ -244,7 +244,7 @@ order: 3
 
 此例来自 `scope_aug_default_display.json`。AUG 自带的一体化瞄具本身就包含了镜桥结构，安装后会与枪械自带的 `mount` 模型重叠，因此设为 `false` 隐藏枪械镜桥。
 
-### 镜片效果 `scope_lens` <Badge text="内测版功能" type="warning" />
+### 镜片效果 `scope_lens`
 
 **仅筒状瞄具**，对象类型。控制开镜时镜片内的画面表现，包括光学畸变、暗角、色调以及夜视 / 热成像。所有键均可省略，缺省时使用普通光学镜片效果。
 
@@ -397,7 +397,7 @@ order: 3
 
 此例来自 `scope_mk5hd_display.json`。
 
-### 测距仪 `rangefinder` <Badge text="内测版功能" type="warning" />
+### 测距仪 `rangefinder`
 
 瞄具还支持测距仪占位符 `%rangefinder%`，可在镜内实时显示准星指向目标的距离。使用该占位符时，需在对应文本组中配置 `rangefinder` 子对象：
 
@@ -441,7 +441,7 @@ order: 3
 
 此例来自 `bayonet_m9_display.json`。
 
-## 枪口粒子偏移 `muzzle_flash_offset` <Badge text="内测版功能" type="warning" />
+## 枪口粒子偏移 `muzzle_flash_offset`
 
 **可选**，数值类型。将第一人称枪口粒子（枪焰与枪烟）的发射原点沿枪口方向前移。主要用于加装长消音器或制退器后，粒子从消音器口喷出而非原枪口。
 
